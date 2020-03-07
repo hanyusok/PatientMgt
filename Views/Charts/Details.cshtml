@@ -1,0 +1,90 @@
+@model PatientMgt.Models.Chart
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>chart of ... patient</h4>
+    <hr />
+    <dl class="row">
+        @* <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.ImageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Url.Content(Model.ImageUrl)" alt="Image"/>
+        </dd> *@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.PatientName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.VisitDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VisitDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.DoctorName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DoctorName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.ChiefComplaint)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChiefComplaint)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.PresentIllness)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PresentIllness)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.PastHistory)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PastHistory)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.Medication)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medication)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.Impression)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Impression)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.DxPlan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DxPlan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.TxPlan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TxPlan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.UltrasoundExam)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UltrasoundExam)
+        </dd>               
+    </dl>                                                                                   
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
