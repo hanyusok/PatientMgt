@@ -1,4 +1,5 @@
 using MongoDB.Driver;
+using MongoDB.Bson;
 using PatientMgt.Models;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
@@ -10,12 +11,21 @@ namespace PatientMgt.Services
     public class PatientService
     {
         private readonly IMongoCollection<Patient> patients;
-
+        
         public PatientService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            patients = db.GetCollection<Patient>("Patients");
+            patients = db.GetCollection<Patient>("Patients");  
+        }
+
+        
+        public void startchart(Patient p) //Insert subdocument(Charts objectId) into Patient
+        {
+            Chart ct = new Chart();
+            ct.Id = ObjectId.GenerateNewId().ToString();
+            ct.PatientName = p.Name;
+            p.Charts = ct;       
         }
 
         public List<Patient> Get()
@@ -28,8 +38,10 @@ namespace PatientMgt.Services
             return patients.Find(p => p.Id == id).FirstOrDefault();
         }
 
+
         public Patient Create(Patient p)
-        {
+        {            
+            startchart(p);
             patients.InsertOne(p);
             return p;
         }

@@ -1,4 +1,6 @@
 using MongoDB.Driver;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson;
 using PatientMgt.Models;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
@@ -10,16 +12,13 @@ namespace PatientMgt.Services
     public class ChartService
     {
         private readonly IMongoCollection<Chart> charts;
-
+        // private readonly IMongoCollection<Patient> patients;
         public ChartService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            charts = db.GetCollection<Chart>("Charts");                         
-            
-            // patients = db.GetCollection<Patient>("Patients");
-                
-
+            charts = db.GetCollection<Chart>("Charts");                 
+                                                
             
         }
 

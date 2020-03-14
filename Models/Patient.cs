@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using MongoDB.Bson;
@@ -73,8 +74,7 @@ namespace PatientMgt.Models
 
         //One patient to Many charts
         [BsonElement("Charts")]
-        public EnumerableQuery<Chart> Charts { get; set; }
-
-
+        public Chart Charts { get; set; } 
+        
     }
 }
