@@ -12,13 +12,22 @@ namespace PatientMgt.Services
     public class ChartService
     {
         private readonly IMongoCollection<Chart> charts;
-        // private readonly IMongoCollection<Patient> patients;
+        // private readonly IList<Chart> charts;
+        // private readonly IMongoCollection<Patient> patients;        
+        
+        
+        
         public ChartService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            charts = db.GetCollection<Chart>("Charts");                 
-                                                
+            charts = db.GetCollection<Chart>("Charts");
+
+            // MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
+            // IMongoDatabase db = client.GetDatabase("PatientDb");
+            // patients = db.GetCollection<Patient>("Patients");
+            // // // // var chart = Builders<Patient>.Filter.AnyEq("charts", new Chart());
+            // charts = patients.Find<Patient>(x => x.Charts.Id == new ObjectId().ToString()).ToList();
             
         }
 

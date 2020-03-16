@@ -16,18 +16,11 @@ namespace PatientMgt.Services
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            patients = db.GetCollection<Patient>("Patients");  
+            patients = db.GetCollection<Patient>("Patients");
+              
         }
 
-        
-        public void startchart(Patient p) //Insert subdocument(Charts objectId) into Patient
-        {
-            Chart ct = new Chart();
-            ct.Id = ObjectId.GenerateNewId().ToString();
-            ct.PatientName = p.Name;
-            p.Charts = ct;       
-        }
-
+ 
         public List<Patient> Get()
         {
             return patients.Find(p => true).ToList();
@@ -40,15 +33,15 @@ namespace PatientMgt.Services
 
 
         public Patient Create(Patient p)
-        {            
-            startchart(p);
+        {   
+            p.Charts = new Chart();  //create subdocument(Chart)
             patients.InsertOne(p);
             return p;
         }
 
-        public void Update(string id, Patient nextp)
+        public void Update(string id, Patient up)
         {
-            patients.ReplaceOne(p => p.Id == id, nextp);
+            patients.ReplaceOne(p => p.Id == id, up);
         }
 
         public void Remove(Patient pt)

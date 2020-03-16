@@ -74,7 +74,8 @@ namespace PatientMgt.Models
 
         //One patient to Many charts
         [BsonElement("Charts")]
-        public Chart Charts { get; set; } 
+        public Chart Charts { get; set; }
+        
         
     }
 }
