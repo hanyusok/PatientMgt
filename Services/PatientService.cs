@@ -34,7 +34,8 @@ namespace PatientMgt.Services
 
         public Patient Create(Patient p)
         {   
-            p.Charts = new Chart();  //create subdocument(Chart)
+            p.Charts = new Chart();             
+            p.Charts.Id = ObjectId.GenerateNewId().ToString();                
             patients.InsertOne(p);
             return p;
         }
