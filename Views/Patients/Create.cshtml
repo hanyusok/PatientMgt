@@ -8,85 +8,104 @@
 
 <h4>Patient</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="">
+    <div class="">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+            
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" placeholder="홍길동" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="DOB" class="control-label"></label>
+                    <input asp-for="DOB" class="form-control" />
+                    <span asp-validation-for="DOB" class="text-danger"></span>
+                </div>          
+                <div class="form-group col-md-6">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" placeholder="경기도 안성시 공도읍" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="DOB" class="control-label"></label>
-                <input asp-for="DOB" class="form-control" />
-                <span asp-validation-for="DOB" class="text-danger"></span>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" placeholder="010-1234-5678" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Status" class="control-label"></label>
+                    <input asp-for="Status" class="form-control" placeholder="건강보험"/>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" placeholder="aaa@g.com" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Bill" class="control-label"></label>
+                    <input asp-for="Bill" class="form-control" placeholder="1234" />
+                    <span asp-validation-for="Bill" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">            
+                    <label asp-for="Notice" class="control-label"></label>
+                    <input asp-for="Notice" class="form-control" placeholder="검사위하여" />
+                    <span asp-validation-for="Notice" class="text-danger"></span>
+                </div>            
+                <div class="form-group col-md-4">
+                    <label asp-for="Message" class="control-label"></label>
+                    <input asp-for="Message" class="form-control" placeholder="실비보험 보유"/>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Doctor" class="control-label"></label>
+                    <input asp-for="Doctor" class="form-control" placeholder="한유석"/>
+                    <span asp-validation-for="Doctor" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-8">
+                    <label asp-for="Procedure" class="control-label"></label>
+                    <input asp-for="Procedure" class="form-control" placeholder="초진" />
+                    <span asp-validation-for="Procedure" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Examination" class="control-label"></label>
+                    <input asp-for="Examination" class="form-control" placeholder="일차 진료"/>
+                    <span asp-validation-for="Examination" class="text-danger"></span>
+                </div>            
+                <div class="form-group col-md-6">
+                    <label asp-for="Diagnosis" class="control-label"></label>
+                    <input asp-for="Diagnosis" class="form-control" placeholder="장염"/>
+                    <span asp-validation-for="Diagnosis" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Cost" class="control-label"></label>
+                    <input asp-for="Cost" class="form-control" placeholder="120" />
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>        
+                <div class="form-group col-md-6">
+                    <label asp-for="ImageUrl" class="control-label"></label>
+                    <input asp-for="ImageUrl" class="form-control" placeholder="/images/bts1.jpg"/>
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Bill" class="control-label"></label>
-                <input asp-for="Bill" class="form-control" />
-                <span asp-validation-for="Bill" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Notice" class="control-label"></label>
-                <input asp-for="Notice" class="form-control" />
-                <span asp-validation-for="Notice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Message" class="control-label"></label>
-                <input asp-for="Message" class="form-control" />
-                <span asp-validation-for="Message" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Doctor" class="control-label"></label>
-                <input asp-for="Doctor" class="form-control" />
-                <span asp-validation-for="Doctor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Procedure" class="control-label"></label>
-                <input asp-for="Procedure" class="form-control" />
-                <span asp-validation-for="Procedure" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Examination" class="control-label"></label>
-                <input asp-for="Examination" class="form-control" />
-                <span asp-validation-for="Examination" class="text-danger"></span>
-            </div>            
-            <div class="form-group">
-                <label asp-for="Diagnosis" class="control-label"></label>
-                <input asp-for="Diagnosis" class="form-control" />
-                <span asp-validation-for="Diagnosis" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cost" class="control-label"></label>
-                <input asp-for="Cost" class="form-control" />
-                <span asp-validation-for="Cost" class="text-danger"></span>
-            </div>        
-            <div class="form-group">
-                <label asp-for="ImageUrl" class="control-label"></label>
-                <input asp-for="ImageUrl" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
