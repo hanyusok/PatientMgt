@@ -64,7 +64,9 @@ namespace PatientMgt.Models
         [BsonElement("ImageUrl")]
         [Display(Name = "Photo")]
         [DataType(DataType.ImageUrl)]
-        public string ImageUrl { get; set; }        
+        public string ImageUrl { get; set; }
+        // [BsonElement("ContentImage")]
+        // public byte[] ContentImage { get; set; }        
          
 
         [BsonElement("Cost")]
