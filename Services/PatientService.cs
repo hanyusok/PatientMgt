@@ -20,6 +20,12 @@ namespace PatientMgt.Services
               
         }
 
+        public Patient AddChart(Patient p)
+        {                                    
+            Chart cht = new Chart();
+            // p.Charts = cht;
+            return p;
+        }
  
         public List<Patient> Get()
         {
@@ -33,10 +39,9 @@ namespace PatientMgt.Services
 
 
         public Patient Create(Patient p)
-        {   
-            p.Charts = new Chart();             
-            p.Charts.Id = ObjectId.GenerateNewId().ToString();                
+        {                             
             patients.InsertOne(p);
+            AddChart(p);
             return p;
         }
 
@@ -54,5 +59,6 @@ namespace PatientMgt.Services
         {
             patients.DeleteOne(p => p.Id == id);
         }
+
     }
 }

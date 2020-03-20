@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj": {}
+    "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj": {
+    "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj",
+        "projectUniqueName": "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj",
         "projectName": "PatientMgt",
-        "projectPath": "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj",
+        "projectPath": "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj",
         "packagesPath": "C:\\Users\\han\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\han\\Code\\PatientMgt\\obj\\",
+        "outputPath": "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\han\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\han\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
