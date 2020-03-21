@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj": {}
+    "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj": {
+    "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj",
+        "projectUniqueName": "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj",
         "projectName": "PatientMgt",
-        "projectPath": "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\PatientMgt.csproj",
+        "projectPath": "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj",
         "packagesPath": "C:\\Users\\han\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\han\\Documents\\GitHub\\PatientMgt\\obj\\",
+        "outputPath": "C:\\Users\\han\\Code\\PatientMgt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\han\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

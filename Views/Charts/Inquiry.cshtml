@@ -1,14 +1,11 @@
 @model IEnumerable<PatientMgt.Models.Chart>
 
 @{
-    ViewData["Title"] = "Chart of ...Patient";
+    ViewData["Title"] = "Inquiry Results";
 }
 
-<h1>Lists of ...Patient</h1>
+<h1>Lists of Inquiry</h1>
 
-<p>
-    <a asp-action="Create">Add New Chart of ...Patient</a>
-</p>
 <!-- Search form -->
 
 <form class="form-inline mr-auto" asp-controller="Charts" asp-action="Inquiry">
@@ -114,3 +111,6 @@
 }
     </tbody>
 </table>
+
+
+<a asp-action="Index">Back to List</a>

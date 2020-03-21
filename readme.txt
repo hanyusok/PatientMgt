@@ -14,3 +14,5 @@ Product -> Chart,
 Order -> Patient,
 OrderDetail ->PatientChart, 
 
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/search?view=aspnetcore-3.1
+search-box만드는법

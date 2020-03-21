@@ -30,15 +30,15 @@ namespace PatientMgt.Services
             return charts.Find(c => true).ToList();
         }
 
-        public List<Chart> Inquiry(string patientName)
+        public List<Chart> Inquiry(string ptName)
         {
             FilterDefinition<Chart> filter = Builders<Chart>.Filter.Empty;
-            patientName = patientName.Trim();
+            ptName = ptName.Trim();
             
-            if (patientName.Length > 0)
+            if (ptName.Length > 0)
             {
                 filter = filter & Builders<Chart>.Filter.Regex(c => c.PatientName,
-                            new BsonRegularExpression(string.Format("{0}", patientName), "i"));            
+                            new BsonRegularExpression(string.Format("{0}", ptName), "i"));            
             }
 
             var filteredcharts = charts.Find(filter).Project(c => new {

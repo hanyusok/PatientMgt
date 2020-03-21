@@ -1,6 +1,7 @@
 using PatientMgt.Services;
 using PatientMgt.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace PatientMgt.Controllers
 {
@@ -16,6 +17,20 @@ namespace PatientMgt.Controllers
         public ActionResult Index()
         {
             return View(chartService.Get());
+        }
+
+        public ActionResult Inquiry(string ptName)
+        {
+            if (ptName == null)
+            {
+                return NotFound();
+            }
+            var inq = chartService.Inquiry(ptName);
+            if (inq == null)
+            {
+                return NotFound();
+            }
+            return View(inq);
         }
 
         public ActionResult Details(string id)

@@ -102,3 +102,4 @@ C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.dll
 C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.pdb
 C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.csproj.CoreCompileInputs.cache
 C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.genruntimeconfig.cache
+C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Charts\Inquiry.cshtml.g.cs
