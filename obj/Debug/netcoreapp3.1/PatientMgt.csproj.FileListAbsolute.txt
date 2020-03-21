@@ -100,3 +100,5 @@ C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.Views.pdb
 C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.csproj.CopyComplete
 C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.dll
 C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.pdb
+C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.csproj.CoreCompileInputs.cache
+C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.genruntimeconfig.cache

@@ -76,8 +76,17 @@ namespace PatientMgt.Models
 
         //One patient to Many charts
         [BsonElement("Charts")]
-        public IList<Chart> Charts { get; set; }
-        
-        
+        public IList<PatientChart> PatientCharts { get; set; }                
+    }
+
+    public class PatientChart
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string ChartId { get; set; }
+
+        [BsonElement("DateVisit")]
+        [DataType(DataType.Date)]
+        public DateTime DateVisit { get; set; }
     }
 }

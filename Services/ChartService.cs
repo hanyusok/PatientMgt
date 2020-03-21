@@ -21,19 +21,52 @@ namespace PatientMgt.Services
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            charts = db.GetCollection<Chart>("Charts");
-
-            // MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
-            // IMongoDatabase db = client.GetDatabase("PatientDb");
-            // patients = db.GetCollection<Patient>("Patients");
-            // // // // var chart = Builders<Patient>.Filter.AnyEq("charts", new Chart());
-            // charts = patients.Find<Patient>(x => x.Charts.Id == new ObjectId().ToString()).ToList();
+            charts = db.GetCollection<Chart>("Charts");          
             
         }
 
         public List<Chart> Get()
         {
             return charts.Find(c => true).ToList();
+        }
+
+        public List<Chart> Inquiry(string patientName)
+        {
+            FilterDefinition<Chart> filter = Builders<Chart>.Filter.Empty;
+            patientName = patientName.Trim();
+            
+            if (patientName.Length > 0)
+            {
+                filter = filter & Builders<Chart>.Filter.Regex(c => c.PatientName,
+                            new BsonRegularExpression(string.Format("{0}", patientName), "i"));            
+            }
+
+            var filteredcharts = charts.Find(filter).Project(c => new {
+                c.Id,   c.PatientName,  c.VisitDate,    c.DoctorName,   c.ChiefComplaint,
+                c.PresentIllness,       c.PastHistory,  c.PhysicalExam, c.Medication,
+                c.Impression,           c.DxPlan,       c.TxPlan,       c.UltrasoundExam
+            }).ToList();
+
+            List<Chart> pcharts = new List<Chart>();
+            foreach (var item in filteredcharts)
+            {
+                Chart c = new Chart();
+                c.Id = item.Id;
+                c.PatientName = item.PatientName;
+                c.VisitDate = item.VisitDate;
+                c.DoctorName = item.DoctorName;
+                c.ChiefComplaint = item.ChiefComplaint;
+                c.PresentIllness = item.PresentIllness;
+                c.PastHistory = item.PastHistory;
+                c.PhysicalExam = item.PhysicalExam;
+                c.Medication = item.Medication;
+                c.Impression = item.Impression;
+                c.DxPlan = item.DxPlan;
+                c.TxPlan = item.TxPlan;
+                c.UltrasoundExam = item.UltrasoundExam;
+                pcharts.Add(c);
+            }
+            return pcharts;            
         }
 
         public Chart Get(string id)

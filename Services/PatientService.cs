@@ -11,21 +11,21 @@ namespace PatientMgt.Services
     public class PatientService
     {
         private readonly IMongoCollection<Patient> patients;
+        private readonly IMongoCollection<Chart> charts;
         
         public PatientService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
             patients = db.GetCollection<Patient>("Patients");
-              
+            charts = db.GetCollection<Chart>("Charts");              
         }
 
-        public Patient AddChart(Patient p)
-        {                                    
-            Chart cht = new Chart();
-            // p.Charts = cht;
-            return p;
-        }
+        // public Patient AddChart(Chart c)
+        // {                                           
+            
+        //     return p;
+        // }
  
         public List<Patient> Get()
         {
@@ -41,7 +41,7 @@ namespace PatientMgt.Services
         public Patient Create(Patient p)
         {                             
             patients.InsertOne(p);
-            AddChart(p);
+            // AddChart(p);            
             return p;
         }
 

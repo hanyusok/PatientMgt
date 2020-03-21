@@ -5,8 +5,12 @@ use PatientDb
 db.createCollection('Patients')
 db.createCollection('Charts')
 
-One Patient has many Charts ; join aggregation solution 찾아야,
-
-
+1) One Patient has many Charts ; join aggregation solution 찾아야,
 db.createCollection('Ultrasounds')
+
+https://www.codeproject.com/Articles/1368325/Test-Driving-MongoDB-with-NET-Core-2
+
+Product -> Chart,
+Order -> Patient,
+OrderDetail ->PatientChart, 
 
