@@ -18,6 +18,20 @@ namespace PatientMgt.Controllers
             return View(patientService.Get());
         }
 
+        public ActionResult Inquiry(string pname)
+        {
+            if (pname == null)
+            {
+                return NotFound();
+            }
+            var inq = patientService.Inquiry(pname);
+            if (inq == null)
+            {
+                return NotFound();
+            }
+            return View(inq);      
+        }
+
         public ActionResult Details(string id)
         {
             if (id == null)

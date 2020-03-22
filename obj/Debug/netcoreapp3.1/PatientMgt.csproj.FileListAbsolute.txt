@@ -104,3 +104,4 @@ C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.cspr
 C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.genruntimeconfig.cache
 C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Charts\Inquiry.cshtml.g.cs
 C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Charts\Inquiry.cshtml.g.cs
+C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Patients\Inquiry.cshtml.g.cs

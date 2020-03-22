@@ -1,10 +1,10 @@
 @model IEnumerable<PatientMgt.Models.Patient>
 
 @{
-    ViewData["Title"] = "Welcome to Patient Management";
+    ViewData["Title"] = "Inquiry Result";
 }
 
-<h1>Patient List</h1>
+<h1>Inquiry Patient List</h1>
 
 <p>
     <a asp-action="Create">Add New Patient</a>
@@ -134,3 +134,5 @@
 }
     </tbody>
 </table>
+
+<a asp-action="Index">Back to List</a>

@@ -12,6 +12,8 @@ namespace PatientMgt.Services
     {
         private readonly IMongoCollection<Patient> patients;
         private readonly IMongoCollection<Chart> charts;
+
+        // private readonly Builders<PatientChart> patientchart;
         
         public PatientService(IConfiguration config)
         {
@@ -21,11 +23,37 @@ namespace PatientMgt.Services
             charts = db.GetCollection<Chart>("Charts");              
         }
 
-        // public Patient AddChart(Chart c)
-        // {                                           
+        public List<Patient> Inquiry(string pname)
+        {
+            FilterDefinition<Patient> filter = Builders<Patient>.Filter.Empty;
+            pname = pname.Trim();
             
-        //     return p;
-        // }
+            if (pname.Length > 0)
+            {
+                filter = filter & Builders<Patient>.Filter.Regex(p => p.Name,
+                            new BsonRegularExpression(string.Format("{0}", pname), "i"));            
+            }
+
+            var filteredpatients = patients.Find(filter).Project(p => new {
+                p.Id,   p.Name,  p.DOB,    p.Address,   p.Phone,  p.Status,   
+                p.Email,  p.Bill,      p.Notice,    p.Message,  p.Doctor,  
+                p.Procedure,  p.Examination, p.Diagnosis, p.ImageUrl
+            }).ToList();
+
+            List<Patient> pts = new List<Patient>();
+            foreach (var item in filteredpatients)
+            {
+                Patient p = new Patient();
+                p.Id = item.Id;  p.Name = item.Name;    p.DOB = item.DOB;
+                p.Address = item.Address;   p.Phone = item.Phone;   p.Status = item.Status;
+                p.Email = item.Email;       p.Bill = item.Bill;     p.Notice = item.Notice;
+                p.Message = item.Message;   p.Doctor = item.Doctor; p.Procedure = item.Procedure;
+                p.Examination = item.Examination;   p.Diagnosis = item.Diagnosis;
+                p.ImageUrl = item.ImageUrl;
+                pts.Add(p);
+            }
+            return pts;       
+        }
  
         public List<Patient> Get()
         {
@@ -39,9 +67,8 @@ namespace PatientMgt.Services
 
 
         public Patient Create(Patient p)
-        {                             
+        {                    
             patients.InsertOne(p);
-            // AddChart(p);            
             return p;
         }
 

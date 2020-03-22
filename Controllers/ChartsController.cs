@@ -30,7 +30,7 @@ namespace PatientMgt.Controllers
             {
                 return NotFound();
             }
-            return View(inq);
+            return View(inq);      
         }
 
         public ActionResult Details(string id)

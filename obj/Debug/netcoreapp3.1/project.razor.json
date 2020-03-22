@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\han\\Documents\\GitHub\\PatientMgt\\Views\\Patients\\Inquiry.cshtml",
+      "TargetPath": "Views\\Patients\\Inquiry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\han\\Documents\\GitHub\\PatientMgt\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
