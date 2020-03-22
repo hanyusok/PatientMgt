@@ -88,5 +88,10 @@ namespace PatientMgt.Models
         [BsonElement("DateVisit")]
         [DataType(DataType.Date)]
         public DateTime DateVisit { get; set; }
+
+        [BsonElement("Comment")]        
+        public string Comment { get; set; }
+
+
     }
 }
