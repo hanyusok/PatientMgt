@@ -105,3 +105,4 @@ C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.genr
 C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Charts\Inquiry.cshtml.g.cs
 C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Charts\Inquiry.cshtml.g.cs
 C:\Users\han\Documents\GitHub\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Patients\Inquiry.cshtml.g.cs
+C:\Users\han\Code\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Patients\Inquiry.cshtml.g.cs
