@@ -51,7 +51,7 @@ namespace PatientMgt.Services
                 p.Examination = item.Examination;   p.Diagnosis = item.Diagnosis;
                 p.ImageUrl = item.ImageUrl;
                 pts.Add(p);
-            }
+            }            
             return pts;       
         }
  

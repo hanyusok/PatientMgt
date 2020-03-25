@@ -27,3 +27,7 @@ A basic patient-chart application. The sample application will have the followin
 
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/search?view=aspnetcore-3.1
 search-box만드는법
+
+https://github.com/dncuug/X.PagedList
+paged list 만드는법
+https://www.aspsnippets.com/Articles/Paging-Pagination-example-in-ASPNet-MVC.aspx
