@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj": {}
+    "D:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj": {
+    "D:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj",
+        "projectUniqueName": "D:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj",
         "projectName": "PatientMgt",
-        "projectPath": "C:\\Users\\han\\Code\\PatientMgt\\PatientMgt.csproj",
+        "projectPath": "D:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj",
         "packagesPath": "C:\\Users\\han\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\han\\Code\\PatientMgt\\obj\\",
+        "outputPath": "D:\\Doc\\GitHub\\PatientMgt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\han\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,7 +38,7 @@
           "dependencies": {
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.10.0, )"
+              "version": "[2.10.2, )"
             }
           },
           "imports": [
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
