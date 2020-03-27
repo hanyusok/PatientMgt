@@ -31,3 +31,6 @@ search-box만드는법
 https://github.com/dncuug/X.PagedList
 paged list 만드는법
 https://www.aspsnippets.com/Articles/Paging-Pagination-example-in-ASPNet-MVC.aspx
+
+https://stackoverflow.com/questions/46269453/safely-insert-or-update-subdocument-in-mongodb
+subdocument insert 하는 법
