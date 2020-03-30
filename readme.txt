@@ -33,4 +33,6 @@ paged list 만드는법
 https://www.aspsnippets.com/Articles/Paging-Pagination-example-in-ASPNet-MVC.aspx
 
 https://stackoverflow.com/questions/46269453/safely-insert-or-update-subdocument-in-mongodb
-subdocument insert 하는 법
+subdocument insert 하는 법 $addToSet, $each 사용법
+
+https://stackoverflow.com/questions/53232771/mongodb-c-sharp-driver-return-only-matching-sub-documents-in-array

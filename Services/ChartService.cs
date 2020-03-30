@@ -12,32 +12,19 @@ namespace PatientMgt.Services
     public class ChartService
     {
         private readonly IMongoCollection<Chart> charts;
-        // private readonly IList<Chart> charts;
-        private readonly IMongoCollection<Patient> patients;        
+        // private IList<Chart> charts;
+        // private readonly IMongoCollection<Patient> patients;        
         
-        // string id = ObjectId.Parse();
-        
-        // List<Chart> charts = new List<Chart>();
-        // List<Patient> patients = new List<Patient>();
         
                
         public ChartService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            // charts = db.GetCollection<Chart>("Charts"); 
-            patients = db.GetCollection<Patient>("Patients");
+            charts = db.GetCollection<Chart>("Charts"); 
             
-            string pid;
-            // var filtr;
-            // var upd;
+
             
-            foreach (Patient pt in patients.AsQueryable())
-            {
-                pid = pt.Id;                                
-            //     filtr = Builders<Patient>.Filter.Eq(x => x.Id, pid);
-            //     upd = Builders<Patient>.Update.AddToSet(x => x.Charts, new Chart());                               
-            }
             
 
         }
@@ -94,22 +81,6 @@ namespace PatientMgt.Services
 
         public Chart Create(Chart c)
         {         
-            charts.InsertOne(c);
-            return c;
-        }
-
-        public Chart Create(Chart c, string pid)
-        {   
-            foreach (Patient pt in patients.AsQueryable())
-            {
-                if ( pid == pt.Id)
-                {
-                    var filtr = Builders<Patient>.Filter.Eq(x => x.Id, pid);
-                    var upd = Builders<Patient>.Update.AddToSet(x => x.Charts, c);
-                    patients.UpdateOne(filtr,upd);
-                }
-                                            
-            }
             charts.InsertOne(c);
             return c;
         }
