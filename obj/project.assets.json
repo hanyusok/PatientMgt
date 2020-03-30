@@ -6204,11 +6204,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj",
+      "projectUniqueName": "C:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj",
       "projectName": "PatientMgt",
-      "projectPath": "D:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj",
+      "projectPath": "C:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj",
       "packagesPath": "C:\\Users\\han\\.nuget\\packages\\",
-      "outputPath": "D:\\Doc\\GitHub\\PatientMgt\\obj\\",
+      "outputPath": "C:\\src\\betaProject\\PatientMgt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\han\\AppData\\Roaming\\NuGet\\NuGet.Config"

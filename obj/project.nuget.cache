@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lxSv5+l6dZ1lwEPMIFPCM8UdckITlTPvTNTDDQQOEtyoyrB7Rj+zG8yJBRyvtwUMaEcFYFvn+Nu8hnNYRtkR0g==",
+  "dgSpecHash": "nF1HkYFGC33CzLSeJ1Z4O2Eh+28MkAorfGXqD7fsR0uosxAxX/FPpCRtv7hXv1ugwZkVB7Nq9FmfOnEuYNpOpQ==",
   "success": true,
-  "projectFilePath": "D:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj",
+  "projectFilePath": "C:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\han\\.nuget\\packages\\dnsclient\\1.2.0\\dnsclient.1.2.0.nupkg.sha512",
     "C:\\Users\\han\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

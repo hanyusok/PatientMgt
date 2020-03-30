@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\PatientMgt.csproj",
+  "FilePath": "c:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20521,98 +20521,98 @@
   "RootNamespace": "PatientMgt",
   "Documents": [
     {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Patients\\Details.cshtml",
-      "TargetPath": "Views\\Patients\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Patients\\Create.cshtml",
-      "TargetPath": "Views\\Patients\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Patients\\Index.cshtml",
-      "TargetPath": "Views\\Patients\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Patients\\Inquiry.cshtml",
-      "TargetPath": "Views\\Patients\\Inquiry.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Charts\\Inquiry.cshtml",
-      "TargetPath": "Views\\Charts\\Inquiry.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Charts\\Edit.cshtml",
-      "TargetPath": "Views\\Charts\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Charts\\Create.cshtml",
-      "TargetPath": "Views\\Charts\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Charts\\Index.cshtml",
-      "TargetPath": "Views\\Charts\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Patients\\Delete.cshtml",
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Patients\\Delete.cshtml",
       "TargetPath": "Views\\Patients\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Charts\\Details.cshtml",
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Patients\\Inquiry.cshtml",
+      "TargetPath": "Views\\Patients\\Inquiry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Charts\\Details.cshtml",
       "TargetPath": "Views\\Charts\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Charts\\Delete.cshtml",
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Charts\\Delete.cshtml",
       "TargetPath": "Views\\Charts\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Patients\\Edit.cshtml",
-      "TargetPath": "Views\\Patients\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Doc\\GitHub\\PatientMgt\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Charts\\Inquiry.cshtml",
+      "TargetPath": "Views\\Charts\\Inquiry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Patients\\Create.cshtml",
+      "TargetPath": "Views\\Patients\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Patients\\Edit.cshtml",
+      "TargetPath": "Views\\Patients\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Patients\\Index.cshtml",
+      "TargetPath": "Views\\Patients\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Charts\\Index.cshtml",
+      "TargetPath": "Views\\Charts\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Patients\\Details.cshtml",
+      "TargetPath": "Views\\Patients\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Charts\\Create.cshtml",
+      "TargetPath": "Views\\Charts\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\src\\betaProject\\PatientMgt\\Views\\Charts\\Edit.cshtml",
+      "TargetPath": "Views\\Charts\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],
