@@ -36,3 +36,6 @@ https://stackoverflow.com/questions/46269453/safely-insert-or-update-subdocument
 subdocument insert 하는 법 $addToSet, $each 사용법
 
 https://stackoverflow.com/questions/53232771/mongodb-c-sharp-driver-return-only-matching-sub-documents-in-array
+
+https://youtu.be/94tWuLUL4iE 
+Relationships between models in ASP.NET Core MVC
