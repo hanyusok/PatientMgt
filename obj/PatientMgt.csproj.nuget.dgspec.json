@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj": {}
+    "C:\\src\\PatientMgt\\PatientMgt.csproj": {}
   },
   "projects": {
-    "C:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj": {
+    "C:\\src\\PatientMgt\\PatientMgt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj",
+        "projectUniqueName": "C:\\src\\PatientMgt\\PatientMgt.csproj",
         "projectName": "PatientMgt",
-        "projectPath": "C:\\src\\betaProject\\PatientMgt\\PatientMgt.csproj",
+        "projectPath": "C:\\src\\PatientMgt\\PatientMgt.csproj",
         "packagesPath": "C:\\Users\\han\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\betaProject\\PatientMgt\\obj\\",
+        "outputPath": "C:\\src\\PatientMgt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\han\\AppData\\Roaming\\NuGet\\NuGet.Config"
