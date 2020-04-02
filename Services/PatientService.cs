@@ -89,5 +89,13 @@ namespace PatientMgt.Services
             return patients.Distinct<Chart>("Charts", filter).ToEnumerable();
         }
 
+        public void AddChart(string id, Chart nChart)
+        {   
+            var filter = new BsonDocument();
+            var upd = nChart.ToBsonDocument();
+            var cht = patients.FindOneAndUpdate<Chart>(filter, upd, null);               
+        
+        }
+
     }
 }

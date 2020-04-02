@@ -134,5 +134,15 @@ namespace PatientMgt.Controllers
         {
             return View(patientService.Charting(id));
         }
+
+        // public IActionResult CreateCharting(string id)
+        // {
+        //     if(ModelState.IsValid)
+        //     {
+        //         patientService.Create(p);
+        //         return RedirectToAction(nameof(Index));
+        //     }
+        //     return View(p);
+        // }
     }
 }

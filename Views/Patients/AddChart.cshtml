@@ -1,0 +1,106 @@
+@model PatientMgt.Models.Chart
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Chart of ... Patient</h4>
+<hr />
+
+<div class="">
+    <div class="">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label asp-for="PatientName" class="control-label"></label>
+                        <input asp-for="PatientName" class="form-control" />
+                        <span asp-validation-for="PatientName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="VisitDate" class="control-label"></label>
+                        <input asp-for="VisitDate" class="form-control" />
+                        <span asp-validation-for="VisitDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="DoctorName" class="control-label"></label>
+                        <input asp-for="DoctorName" class="form-control" />
+                        <span asp-validation-for="DoctorName" class="text-danger"></span>
+                    </div>
+                </div>
+
+            <div class="form-group">
+                <label asp-for="ChiefComplaint" class="control-label"></label>
+                <input asp-for="ChiefComplaint" class="form-control" />
+                <span asp-validation-for="ChiefComplaint" class="text-danger"></span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="PresentIllness" class="control-label"></label>
+                    <textarea asp-for="PresentIllness" class="form-control" ></textarea>
+                    <span asp-validation-for="PresentIllness" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="PastHistory" class="control-label"></label>
+                    <textarea asp-for="PastHistory" class="form-control" ></textarea>
+                    <span asp-validation-for="PastHistory" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="PhysicalExam" class="control-label"></label>
+                    <textarea asp-for="PhysicalExam" class="form-control" ></textarea>
+                    <span asp-validation-for="PhysicalExam" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Medication" class="control-label"></label>
+                    <textarea asp-for="Medication" class="form-control" ></textarea>
+                    <span asp-validation-for="Medication" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Impression" class="control-label"></label>
+                    <textarea asp-for="Impression" class="form-control" ></textarea>
+                    <span asp-validation-for="Impression" class="text-danger"></span>
+                </div>            
+                <div class="form-group col-md-4">
+                    <label asp-for="DxPlan" class="control-label"></label>
+                    <textarea asp-for="DxPlan" class="form-control" ></textarea>
+                    <span asp-validation-for="DxPlan" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="TxPlan" class="control-label"></label>
+                    <textarea asp-for="TxPlan" class="form-control" ></textarea>
+                    <span asp-validation-for="TxPlan" class="text-danger"></span>
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label asp-for="UltrasoundExam" class="control-label"></label>
+                    <textarea asp-for="UltrasoundExam" class="form-control" ></textarea>
+                    <span asp-validation-for="UltrasoundExam" class="text-danger"></span>
+                </div>            
+            
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/custom-validation.js"></script>
+}
