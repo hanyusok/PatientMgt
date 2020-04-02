@@ -1,0 +1,118 @@
+@model IEnumerable<PatientMgt.Models.Chart>
+
+@{
+    ViewData["Title"] = "Chart of ...Patient";
+}
+
+<h1>Lists of ...Patient</h1>
+
+<p>
+    <a asp-action="Create">Add New Chart to Patient</a>
+</p>
+<!-- Search form -->
+
+<form class="form-inline mr-auto" asp-controller="Charts" asp-action="Inquiry">
+  <input class="form-control mr-sm-2" type="text" placeholder="환자이름" aria-label="Search" name="ptName">
+  <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">검색</button>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VisitDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoctorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChiefComplaint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresentIllness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PastHistory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhysicalExam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medication)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Impression)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DxPlan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TxPlan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UltrasoundExam)
+            </th>                                                
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @* <td>
+                @if (item.ImageUrl != null)
+                {
+                    <img src="@Url.Content(item.ImageUrl)" alt="Image" />
+                }
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VisitDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoctorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChiefComplaint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresentIllness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PastHistory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalExam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medication)
+            </td>      
+            <td>
+                @Html.DisplayFor(modelItem => item.Impression)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DxPlan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TxPlan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltrasoundExam)
+            </td>                  
+                  
+            @* <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td> *@
+        </tr>
+}
+    </tbody>
+</table>
+
+

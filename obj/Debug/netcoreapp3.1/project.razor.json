@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\src\\PatientMgt\\Views\\Patients\\Charting.cshtml",
+      "TargetPath": "Views\\Patients\\Charting.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\src\\PatientMgt\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

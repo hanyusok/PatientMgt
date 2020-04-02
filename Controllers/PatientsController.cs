@@ -129,5 +129,10 @@ namespace PatientMgt.Controllers
                 return View();
             }
         }
+
+        public ActionResult Charting(string id)
+        {
+            return View(patientService.Charting(id));
+        }
     }
 }

@@ -10,17 +10,13 @@ namespace PatientMgt.Services
 {
     public class PatientService
     {
-        private readonly IMongoCollection<Patient> patients;
-        // private readonly IMongoCollection<Chart> charts;
-
-        // private readonly Builders<PatientChart> patientchart;
+        private readonly IMongoCollection<Patient> patients;       
         
         public PatientService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            patients = db.GetCollection<Patient>("Patients");
-            // charts = db.GetCollection<Chart>("Charts");              
+            patients = db.GetCollection<Patient>("Patients");            
         }
 
         public List<Patient> Inquiry(string pname)
@@ -85,6 +81,12 @@ namespace PatientMgt.Services
         public void Remove(string id)
         {
             patients.DeleteOne(p => p.Id == id);
+        }
+
+        public IEnumerable<Chart> Charting(string id)
+        {         
+            var filter = new BsonDocument(); 
+            return patients.Distinct<Chart>("Charts", filter).ToEnumerable();
         }
 
     }
