@@ -130,7 +130,7 @@ namespace PatientMgt.Controllers
             }
         }
 
-        public ActionResult Charting(string id)
+        public ActionResult Charting(string id, Patient p)
         {
             return View(patientService.Charting(id));
         }
