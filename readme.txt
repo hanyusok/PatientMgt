@@ -39,3 +39,6 @@ https://stackoverflow.com/questions/53232771/mongodb-c-sharp-driver-return-only-
 
 https://youtu.be/94tWuLUL4iE 
 Relationships between models in ASP.NET Core MVC
+
+https://stackoverflow.com/questions/15117030/how-to-filter-array-in-subdocument-with-mongodb
+subdocument 가져오는 법

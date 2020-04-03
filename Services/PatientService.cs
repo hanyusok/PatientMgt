@@ -1,6 +1,5 @@
 using MongoDB.Driver;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
 using PatientMgt.Models;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
@@ -84,59 +83,86 @@ namespace PatientMgt.Services
             patients.DeleteOne(p => p.Id == id);
         }
 
-        public IEnumerable<Chart> Charting(string id)
-        {   
-            if (id == null)
-            {
-                return 
-            }
-            var pid = ObjectId.Parse(id);      
-            Patient p = patients.Find(p => p.Id == id).FirstOrDefault();
-            // var filter = new BsonDocument(); 
-            if (p.Charts == null)
-            {
-
-            } else 
-            {
-                p.Charts = Builders<Patient>.Filter.Where(pt => pt.Charts, "Charts");
-            }
-            var chts = p.Charts.ToList();
-            // Chart cht = new Chart();
-            // var chts = patients.Distinct<Chart>("Charts", filter).ToList();            
+        // public List<Chart> Charting(string id)
+        // {   
+            // var filt = Builders<Patient>.Filter.AnyEq("Charts", new List<Chart>(){});
+            // var result = patients.Find(filt).ToList();
+            // return result;
+       
             
-            foreach(Chart item in chts)
-            {
-                Chart ct = new Chart();
-                // ct.Id = ObjectId.GenerateNewId.ToString();
-                ct.PatientName = item.PatientName;
-                ct.VisitDate = item.VisitDate;
-                ct.DoctorName = item.DoctorName;
-                ct.ChiefComplaint = item.ChiefComplaint;
-                ct.PresentIllness = item.PresentIllness;
-                ct.PastHistory = item.PastHistory;
-                ct.PhysicalExam = item.PhysicalExam;
-                ct.Medication = item.Medication;
-                ct.Impression = item.Impression;
-                ct.DxPlan = item.DxPlan;
-                ct.TxPlan = item.TxPlan;
-                ct.UltrasoundExam = item.UltrasoundExam;
-                chts.Append(ct);                
-            }
-            return chts;
             
-        }
+            // List<Chart> qu = EnumerableQuery<Chart>.Equals(pr => pr.Id, id);
+  
+            
+            
+            
+                 
+            // var chts = patients.Aggregate().Match(bldr);
+            // var pid = ObjectId.Parse(id);                  
+            
+            // var upd = Builders<Patient>.Update.AddToSet(c => c.Charts, new Chart(){
+            //     Id = ObjectId.GenerateNewId().ToString(),      
+            
+            // var chts = p.Charts.ToList();
+            // // Chart cht = new Chart();
+            // // var chts = patients.Distinct<Chart>("Charts", filter).ToList();            
+            
+            // foreach(Chart item in chts)
+            // {
+            //     Chart ct = new Chart();
+            //     // ct.Id = ObjectId.GenerateNewId.ToString();
+            //     ct.PatientName = item.PatientName;
+            //     ct.VisitDate = item.VisitDate;
+            //     ct.DoctorName = item.DoctorName;
+            //     ct.ChiefComplaint = item.ChiefComplaint;
+            //     ct.PresentIllness = item.PresentIllness;
+            //     ct.PastHistory = item.PastHistory;
+            //     ct.PhysicalExam = item.PhysicalExam;
+            //     ct.Medication = item.Medication;
+            //     ct.Impression = item.Impression;
+            //     ct.DxPlan = item.DxPlan;
+            //     ct.TxPlan = item.TxPlan;
+            //     ct.UltrasoundExam = item.UltrasoundExam;
+            //     chts.Append(ct);                
+            // }
+            // return chts;
+            
+        // }
 
         // public Patient AddChart(string id, Patient p)
         // {   
-            // var chtid = ObjectId.Parse(id);
-            // var builder = Builders<Patient>.Filter.AnyEq(p => p.Charts, "Charts");
-            // var upd = Builders<Patient>.Update.AddToSet(c => c.Charts, new Chart(){
-            //     Id = ObjectId.GenerateNewId().ToString(),             
-
-            // });
+                              // var pid = ObjectId.Parse(id);      
             
-            // var result = patients.UpdateOne<Patient>(builder, upd);
-            // return result;               
+            // var bldr = Builders<Patient>.Filter.Eq(v => v.Id, id);
+            // var upd = Builders<Patient>.Update.AddToSet(c => c.Charts, new Chart(){
+                // Id = ObjectId.GenerateNewId().ToString(),  
+            
+            
+            
+            
+            // var chts = p.Charts.ToList();
+            // // Chart cht = new Chart();
+            // // var chts = patients.Distinct<Chart>("Charts", filter).ToList();            
+            
+            // foreach(Chart item in chts)
+            // {
+            //     Chart ct = new Chart();
+            //     // ct.Id = ObjectId.GenerateNewId.ToString();
+            //     ct.PatientName = item.PatientName;
+            //     ct.VisitDate = item.VisitDate;
+            //     ct.DoctorName = item.DoctorName;
+            //     ct.ChiefComplaint = item.ChiefComplaint;
+            //     ct.PresentIllness = item.PresentIllness;
+            //     ct.PastHistory = item.PastHistory;
+            //     ct.PhysicalExam = item.PhysicalExam;
+            //     ct.Medication = item.Medication;
+            //     ct.Impression = item.Impression;
+            //     ct.DxPlan = item.DxPlan;
+            //     ct.TxPlan = item.TxPlan;
+            //     ct.UltrasoundExam = item.UltrasoundExam;
+            //     chts.Append(ct);                
+            // }
+            // return chts;
         
         // }
 

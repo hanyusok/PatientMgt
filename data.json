@@ -1,0 +1,138 @@
+{
+  {
+    "_id": {
+      "$oid": "5e86fe1eaa5ab10328e1b417"
+    },
+    "Name": "홍길동",
+    "DOB": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "Address": "서울시 서초구",
+    "Phone": " 010-123-4567",
+    "Status": "건강보험",
+    "Email": "a@aaa.com",
+    "Bill": " 5000",
+    "Notice": "지인소개",
+    "Message": "3일처방원함",
+    "Doctor": "김교수",
+    "Procedure": "기본진찰",
+    "Examination": "청진",
+    "Diagnosis": "상기도감염",
+    "ImageUrl": "/images/bts1.jpg",
+    "Cost": "0",
+    "Charts": [
+      {
+        "PatientName": "홍길동",
+        "VisitDate": "",
+        "DoctorName": "김교수",
+        "ChiefComplaint": "배아파서",
+        "PresentIllness": "복통",
+        "PastHistory": "고혈압",
+        "PhysicalExam": "복부팽만",
+        "Medication": "타이레놀",
+        "Impression": "Tonsillitis",
+        "DXplan": "복부초음파",
+        "Txplan": "처방약 복용",
+        "UltrasoundExam": "임파선부종"
+      },
+      {
+        "PatientName": "홍길동",
+        "VisitDate": "",
+        "DoctorName": "최교수",
+        "ChiefComplaint": "기침가래",
+        "PresentIllness": "호흡곤란",
+        "PastHistory": "천식",
+        "PhysicalExam": "천명음",
+        "Medication": "암브록솔",
+        "Impression": "Bronchitis",
+        "DXplan": "흉부 방사선",
+        "Txplan": "처방약 복용",
+        "UltrasoundExam": "페렴의심"
+      },
+      {
+        "PatientName": "홍길동",
+        "VisitDate": "",
+        "DoctorName": "이교수",
+        "ChiefComplaint": "우하복부 통증",
+        "PresentIllness": "설사",
+        "PastHistory": "장염",
+        "PhysicalExam": "압통",
+        "Medication": "티로파",
+        "Impression": "Gastroenteritis",
+        "DXplan": "복부 초음파",
+        "Txplan": "처방약 복용",
+        "UltrasoundExam": "계실염"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e86fe1eaa5ab10328e1b418"
+    },
+    "Name": "박석규",
+    "DOB": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "Address": "경기도 안성시",
+    "Phone": " 010-323-3467",
+    "Status": "건강보험",
+    "Email": "b@aaa.com",
+    "Bill": " 6000",
+    "Notice": "초진",
+    "Message": "3일처방원함",
+    "Doctor": " 박교수",
+    "Procedure": "기본진찰",
+    "Examination": "복부진찰",
+    "Diagnosis": "급성장염",
+    "ImageUrl": "/images/bts2.jpg",
+    "Cost": "0",
+    "Charts": [
+      {
+        "PatientName": "홍길동",
+        "VisitDate": "",
+        "DoctorName": "김교수",
+        "ChiefComplaint": "배아파서",
+        "PresentIllness": "복통",
+        "PastHistory": "고혈압",
+        "PhysicalExam": "복부팽만",
+        "Medication": "타이레놀",
+        "Impression": "Tonsillitis",
+        "DXplan": "복부초음파",
+        "Txplan": "처방약 복용",
+        "UltrasoundExam": "임파선부종"
+      },
+      {
+        "PatientName": "홍길동",
+        "VisitDate": "",
+        "DoctorName": "최교수",
+        "ChiefComplaint": "기침가래",
+        "PresentIllness": "호흡곤란",
+        "PastHistory": "천식",
+        "PhysicalExam": "천명음",
+        "Medication": "암브록솔",
+        "Impression": "Bronchitis",
+        "DXplan": "흉부 방사선",
+        "Txplan": "처방약 복용",
+        "UltrasoundExam": "페렴의심"
+      },
+      {
+        "PatientName": "홍길동",
+        "VisitDate": "",
+        "DoctorName": "이교수",
+        "ChiefComplaint": "우하복부 통증",
+        "PresentIllness": "설사",
+        "PastHistory": "장염",
+        "PhysicalExam": "압통",
+        "Medication": "티로파",
+        "Impression": "Gastroenteritis",
+        "DXplan": "복부 초음파",
+        "Txplan": "처방약 복용",
+        "UltrasoundExam": "계실염"
+      }
+    ]
+  }
+}
