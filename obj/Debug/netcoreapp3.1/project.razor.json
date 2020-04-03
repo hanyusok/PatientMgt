@@ -20526,6 +20526,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\src\\PatientMgt\\Views\\Patients\\EditChart.cshtml",
+      "TargetPath": "Views\\Patients\\EditChart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\src\\PatientMgt\\Views\\Patients\\Index.cshtml",
       "TargetPath": "Views\\Patients\\Index.cshtml",
       "FileKind": "mvc"
