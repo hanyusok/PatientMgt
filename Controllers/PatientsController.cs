@@ -132,7 +132,16 @@ namespace PatientMgt.Controllers
 
         public ActionResult Charting(string id)
         {
-            return View(patientService.Charting(id));
+            if (id == null)
+            {
+                return NotFound();                
+            }
+            var p = patientService.Get(id);
+            if (p.Charts == null)
+            {
+                return NotFound();
+            } 
+            return View(p.Charts);            
         }
 
         // public IActionResult CreateCharting(string id)

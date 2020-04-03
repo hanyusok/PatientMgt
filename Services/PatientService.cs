@@ -85,9 +85,9 @@ namespace PatientMgt.Services
 
         // public List<Chart> Charting(string id)
         // {   
-            // var filt = Builders<Patient>.Filter.AnyEq("Charts", new List<Chart>(){});
-            // var result = patients.Find(filt).ToList();
-            // return result;
+        //     var filt = Builders<Patient>.Filter.AnyEq("Charts", new List<Chart>(){});
+        //     var result = patients.Find(filt).ToList();
+        //     return result;
        
             
             
