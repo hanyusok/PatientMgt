@@ -40,11 +40,20 @@ namespace PatientMgt.Services
             foreach (var item in filteredpatients)
             {
                 Patient p = new Patient();
-                p.Id = item.Id;  p.Name = item.Name;    p.DOB = item.DOB;
-                p.Address = item.Address;   p.Phone = item.Phone;   p.Status = item.Status;
-                p.Email = item.Email;       p.Bill = item.Bill;     p.Notice = item.Notice;
-                p.Message = item.Message;   p.Doctor = item.Doctor; p.Procedure = item.Procedure;
-                p.Examination = item.Examination;   p.Diagnosis = item.Diagnosis;
+                p.Id = item.Id;  
+                p.Name = item.Name;    
+                p.DOB = item.DOB;
+                p.Address = item.Address;   
+                p.Phone = item.Phone;   
+                p.Status = item.Status;
+                p.Email = item.Email;       
+                p.Bill = item.Bill;     
+                p.Notice = item.Notice;
+                p.Message = item.Message;   
+                p.Doctor = item.Doctor; 
+                p.Procedure = item.Procedure;
+                p.Examination = item.Examination;   
+                p.Diagnosis = item.Diagnosis;
                 p.ImageUrl = item.ImageUrl;
                 pts.Add(p);
             }            
@@ -98,88 +107,26 @@ namespace PatientMgt.Services
             patients.DeleteOne(p => p.Id == id);
         }
 
-        // public List<Chart> Charting(string id)
-        // {   
-        //     var filt = Builders<Patient>.Filter.AnyEq("Charts", new List<Chart>(){});
-        //     var result = patients.Find(filt).ToList();
-        //     return result;
-       
-            
-            
-            // List<Chart> qu = EnumerableQuery<Chart>.Equals(pr => pr.Id, id);
-  
-            
-            
-            
-                 
-            // var chts = patients.Aggregate().Match(bldr);
-            // var pid = ObjectId.Parse(id);                  
-            
-            // var upd = Builders<Patient>.Update.AddToSet(c => c.Charts, new Chart(){
-            //     Id = ObjectId.GenerateNewId().ToString(),      
-            
-            // var chts = p.Charts.ToList();
-            // // Chart cht = new Chart();
-            // // var chts = patients.Distinct<Chart>("Charts", filter).ToList();            
-            
-            // foreach(Chart item in chts)
-            // {
-            //     Chart ct = new Chart();
-            //     // ct.Id = ObjectId.GenerateNewId.ToString();
-            //     ct.PatientName = item.PatientName;
-            //     ct.VisitDate = item.VisitDate;
-            //     ct.DoctorName = item.DoctorName;
-            //     ct.ChiefComplaint = item.ChiefComplaint;
-            //     ct.PresentIllness = item.PresentIllness;
-            //     ct.PastHistory = item.PastHistory;
-            //     ct.PhysicalExam = item.PhysicalExam;
-            //     ct.Medication = item.Medication;
-            //     ct.Impression = item.Impression;
-            //     ct.DxPlan = item.DxPlan;
-            //     ct.TxPlan = item.TxPlan;
-            //     ct.UltrasoundExam = item.UltrasoundExam;
-            //     chts.Append(ct);                
-            // }
-            // return chts;
-            
-        // }
-
-        // public Patient AddChart(string id, Patient p)
-        // {   
-                              // var pid = ObjectId.Parse(id);      
-            
-            // var bldr = Builders<Patient>.Filter.Eq(v => v.Id, id);
-            // var upd = Builders<Patient>.Update.AddToSet(c => c.Charts, new Chart(){
-                // Id = ObjectId.GenerateNewId().ToString(),  
-            
-            
-            
-            
-            // var chts = p.Charts.ToList();
-            // // Chart cht = new Chart();
-            // // var chts = patients.Distinct<Chart>("Charts", filter).ToList();            
-            
-            // foreach(Chart item in chts)
-            // {
-            //     Chart ct = new Chart();
-            //     // ct.Id = ObjectId.GenerateNewId.ToString();
-            //     ct.PatientName = item.PatientName;
-            //     ct.VisitDate = item.VisitDate;
-            //     ct.DoctorName = item.DoctorName;
-            //     ct.ChiefComplaint = item.ChiefComplaint;
-            //     ct.PresentIllness = item.PresentIllness;
-            //     ct.PastHistory = item.PastHistory;
-            //     ct.PhysicalExam = item.PhysicalExam;
-            //     ct.Medication = item.Medication;
-            //     ct.Impression = item.Impression;
-            //     ct.DxPlan = item.DxPlan;
-            //     ct.TxPlan = item.TxPlan;
-            //     ct.UltrasoundExam = item.UltrasoundExam;
-            //     chts.Append(ct);                
-            // }
-            // return chts;
-        
-        // }
-
+        public void NewChart(Patient p)
+        {
+            foreach (Chart item in p.Charts)
+            {
+                Chart ct = new Chart();             
+                // ct.Id = ObjectId.GenerateNewId.ToString();
+                ct.PatientName = item.PatientName;
+                ct.VisitDate = item.VisitDate;
+                ct.DoctorName = item.DoctorName;
+                ct.ChiefComplaint = item.ChiefComplaint;
+                ct.PresentIllness = item.PresentIllness;
+                ct.PastHistory = item.PastHistory;
+                ct.PhysicalExam = item.PhysicalExam;
+                ct.Medication = item.Medication;
+                ct.Impression = item.Impression;
+                ct.DxPlan = item.DxPlan;
+                ct.TxPlan = item.TxPlan;
+                ct.UltrasoundExam = item.UltrasoundExam;
+                p.Charts.Append(ct);                
+            }      
+        }
     }
 }

@@ -144,14 +144,19 @@ namespace PatientMgt.Controllers
             return View(p.Charts);            
         }
 
-        // public IActionResult CreateCharting(string id)
-        // {
-        //     if(ModelState.IsValid)
-        //     {
-        //         patientService.Create(p);
-        //         return RedirectToAction(nameof(Index));
-        //     }
-        //     return View(p);
-        // }
+        public IActionResult AddChart(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Patient p = patientService.Get(id);
+            if(ModelState.IsValid)
+            {
+                patientService.NewChart(p);
+                return RedirectToAction(nameof(Charting));
+            }
+            return View(p.Charts);
+        }
     }
 }
