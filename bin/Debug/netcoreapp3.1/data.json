@@ -35,33 +35,7 @@
             "DxPlan": "복부초음파",
             "TxPlan": "처방약 복용",
             "UltrasoundExam": "임파선부종"
-        }
-    ]
-},
-{
-    "_id": {
-        "$oid": "5e87387af3016b1a6081185e"
-    },
-    "Name": "홍길동",
-    "DOB": {
-        "$date": {
-            "$numberLong": "-62135596800000"
-        }
-    },
-    "Address": "서울시 서초구",
-    "Phone": " 010-123-4567",
-    "Status": "건강보험",
-    "Email": "a@aaa.com",
-    "Bill": " 5000",
-    "Notice": "지인소개",
-    "Message": "3일처방원함",
-    "Doctor": "김교수",
-    "Procedure": "기본진찰",
-    "Examination": "청진",
-    "Diagnosis": "상기도감염",
-    "ImageUrl": "/images/bts1.jpg",
-    "Cost": "0",
-    "Charts": [
+        },
         {
             "PatientName": "홍길동",
             "VisitDate": "0001-01-01T00:00:00.000+00:00",

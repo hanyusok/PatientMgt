@@ -69,8 +69,23 @@ namespace PatientMgt.Services
         }
 
         public void Update(string id, Patient up)
-        {
-            patients.ReplaceOne(p => p.Id == id, up);
+        {         
+            var upd = Builders<Patient>.Update
+                        .Set(p => p.Name, up.Name)
+                        .Set(p => p.Address, up.Address)
+                        .Set(p => p.Phone, up.Phone)
+                        .Set(p => p.Status, up.Status)
+                        .Set(p => p.Email, up.Email)
+                        .Set(p => p.Bill, up.Bill)
+                        .Set(p => p.Notice, up.Notice)
+                        .Set(p => p.Message, up.Message)
+                        .Set(p => p.Doctor, up.Doctor)
+                        .Set(p => p.Procedure, up.Procedure)
+                        .Set(p => p.Examination, up.Examination)
+                        .Set(p => p.Diagnosis, up.Diagnosis)
+                        .Set(p => p.ImageUrl, up.ImageUrl)
+                        .Set(p => p.Cost, up.Cost);                
+            patients.FindOneAndUpdate(p => p.Id == id, upd);
         }
 
         public void Remove(Patient pt)
