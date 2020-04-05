@@ -107,6 +107,13 @@ namespace PatientMgt.Services
             patients.DeleteOne(p => p.Id == id);
         }
 
+        public IEnumerable<Patient.Chart> GetCharts(string id)
+        {
+            var pt = patients.Find(p => p.Id == id).FirstOrDefault();
+
+            return pt.Charts;
+
+        }
         public void NewChart(string id)
         {
             var pt = patients.Find(p => p.Id == id).FirstOrDefault();

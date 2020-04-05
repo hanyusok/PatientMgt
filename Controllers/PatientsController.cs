@@ -136,28 +136,30 @@ namespace PatientMgt.Controllers
             {
                 return NotFound();                
             }
-            var p = patientService.Get(id);
-            if (p.Charts == null)
+            // var p = patientService.Get(id);
+            var ptCht = patientService.GetCharts(id);
+            if (ptCht == null)
             {
                 return NotFound();
             } 
-            return View(p.Charts);            
+            return View(ptCht);            
         }
 
-        public IActionResult AddChart(string id)
+        public IActionResult AddChart()
         {
 
-            if (id == null)
-            {
-                return NotFound();
-            }
-            Patient p = patientService.Get(id);
-            if(ModelState.IsValid)
-            {
-                patientService.NewChart(id);
-                return RedirectToAction(nameof(Charting));
-            }
-            return View(p.Charts);
+            // if (id == null)
+            // {
+            //     return NotFound();
+            // }
+            // Patient p = patientService.Get(id);
+            // if(ModelState.IsValid)
+            // {
+            //     patientService.NewChart(id);
+            //     return RedirectToAction(nameof(Charting));
+            // }
+            // return View(p.Charts);
+            return View();
         }
     }
 }
