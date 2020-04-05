@@ -146,6 +146,7 @@ namespace PatientMgt.Controllers
 
         public IActionResult AddChart(string id)
         {
+
             if (id == null)
             {
                 return NotFound();
@@ -153,7 +154,7 @@ namespace PatientMgt.Controllers
             Patient p = patientService.Get(id);
             if(ModelState.IsValid)
             {
-                patientService.NewChart(p);
+                patientService.NewChart(id);
                 return RedirectToAction(nameof(Charting));
             }
             return View(p.Charts);

@@ -107,26 +107,29 @@ namespace PatientMgt.Services
             patients.DeleteOne(p => p.Id == id);
         }
 
-        public void NewChart(Patient p)
+        public void NewChart(string id)
         {
-            foreach (Chart item in p.Charts)
-            {
-                Chart ct = new Chart();             
-                // ct.Id = ObjectId.GenerateNewId.ToString();
-                ct.PatientName = item.PatientName;
-                ct.VisitDate = item.VisitDate;
-                ct.DoctorName = item.DoctorName;
-                ct.ChiefComplaint = item.ChiefComplaint;
-                ct.PresentIllness = item.PresentIllness;
-                ct.PastHistory = item.PastHistory;
-                ct.PhysicalExam = item.PhysicalExam;
-                ct.Medication = item.Medication;
-                ct.Impression = item.Impression;
-                ct.DxPlan = item.DxPlan;
-                ct.TxPlan = item.TxPlan;
-                ct.UltrasoundExam = item.UltrasoundExam;
-                p.Charts.Append(ct);                
-            }      
+            var pt = patients.Find(p => p.Id == id).FirstOrDefault();
+        
+            // foreach (Chart item in pt.Charts)
+            // {
+            //     Chart ct = new Chart();             
+            //     // ct.Id = ObjectId.GenerateNewId.ToString();
+            //     ct.PatientName = item.PatientName;
+            //     ct.VisitDate = item.VisitDate;
+            //     ct.DoctorName = item.DoctorName;
+            //     ct.ChiefComplaint = item.ChiefComplaint;
+            //     ct.PresentIllness = item.PresentIllness;
+            //     ct.PastHistory = item.PastHistory;
+            //     ct.PhysicalExam = item.PhysicalExam;
+            //     ct.Medication = item.Medication;
+            //     ct.Impression = item.Impression;
+            //     ct.DxPlan = item.DxPlan;
+            //     ct.TxPlan = item.TxPlan;
+            //     ct.UltrasoundExam = item.UltrasoundExam;
+            //     pt.Charts.Append(ct);                                
+                
+            // }      
         }
     }
 }

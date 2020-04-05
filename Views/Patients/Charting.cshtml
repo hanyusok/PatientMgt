@@ -1,15 +1,15 @@
-@model IEnumerable<PatientMgt.Models.Chart>
-    
+@model IEnumerable<PatientMgt.Models.Patient.Chart>
+     
 
 @{
     ViewData["Title"] = "Charting";
 }
 
-<h1>Lists of ...Patient</h1>
+<h1>Chart Lists of ...Patient</h1>
 
 <p>
-    @* <a asp-action="AddChart">Add New Chart to Patient</a> *@
-     @* @Html.ActionLink("New Chart", "AddChart", new { id = item.Id }) *@
+    @* <a asp-action="AddChart">Add New Chart to Patient</a>    *@
+     @Html.ActionLink("차트만들기", "AddChart") 
 </p>
 <!-- Search form -->
 
