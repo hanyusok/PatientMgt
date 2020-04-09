@@ -1,14 +1,13 @@
-@model IEnumerable<PatientMgt.Models.Patient.Chart>
-     
+@model IEnumerable<PatientMgt.Models.Patient.Chart>     
 
-@{
-    ViewData["Title"] = "Charting";
-}
 
-<h1>Chart Lists of ...Patient</h1>
+@{    ViewData["Title"] = "Charting"; }
+
+<h1>Chart Lists of ... Patient</h1>
 
 <p>
-    <a asp-action="AddChart">Add New Chart to Patient</a>        
+    @* <a asp-controller="Patients" asp-action="AddChart" >새차트 만들기</a>  *@
+    @Html.ActionLink("새차트 만들기", "AddChart", new { } )       
 </p>
 <!-- Search form -->
 
@@ -22,7 +21,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PatientName)
+                @Html.DisplayNameFor(model => model.PatientName)                
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.VisitDate)
