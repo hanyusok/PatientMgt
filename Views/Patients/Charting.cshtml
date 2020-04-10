@@ -6,8 +6,7 @@
 <h1>Chart Lists of ... Patient</h1>
 
 <p>
-    @* <a asp-controller="Patients" asp-action="AddChart" >새차트 만들기</a>  *@
-    @Html.ActionLink("새차트 만들기", "AddChart", new { } )       
+    <a asp-controller="Patients" asp-action="NewChart" asp-route-id="5e87382492dd511c18f5a033" >새차트 만들기</a>   
 </p>
 <!-- Search form -->
 
@@ -106,9 +105,9 @@
             </td>                  
                   
             <td>
-                @Html.ActionLink("Edit", "EditChart", new { id = item.Id }) |
-                @Html.ActionLink("Details", "DetailsChart", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "DeleteChart", new { id = item.Id })
+                @Html.ActionLink("Edit", "EditChart", new { id = item.PatientId }) |
+                @Html.ActionLink("Details", "DetailsChart", new { id = item.PatientId }) |
+                @Html.ActionLink("Delete", "DeleteChart", new { id = item.PatientId })
             </td>
         </tr>
 }

@@ -42,3 +42,6 @@ Relationships between models in ASP.NET Core MVC
 
 https://stackoverflow.com/questions/15117030/how-to-filter-array-in-subdocument-with-mongodb
 subdocument 가져오는 법
+
+https://stackoverflow.com/questions/51937439/passing-id-to-url-asp-net-mvc
+url id passing 하는 법

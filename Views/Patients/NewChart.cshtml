@@ -1,17 +1,17 @@
 @model PatientMgt.Models.Patient.Chart
 
 @{
-    ViewData["Title"] = "AddChart";
+    ViewData["Title"] = "NewChart";
 }
 
-<h1>Create</h1>
+<h1>New Chart</h1>
 
-<h4>Chart of ... Patient</h4>
+<h4>Chart of 5e87382492dd511c18f5a033. Patient</h4>
 <hr />
 
 <div class="">
     <div class="">
-        <form asp-action="Create">
+        <form asp-action="AddChart" asp-route-id="5e87382492dd511c18f5a033">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 
                 <div class="form-row">
@@ -90,14 +90,14 @@
             
             
             <div class="form-group">
-                <input type="submit" value="AddChart" class="btn btn-primary" />
+                <input type="submit" value="New Chart" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Charting">Back to Charting List</a>
+    <a asp-action="Charting" asp-route-id="5e87382492dd511c18f5a033">Back to Charting List</a>
 </div>
 
 @section Scripts {

@@ -119,9 +119,8 @@ namespace PatientMgt.Services
         {
             var fltr = Builders<Patient>.Filter.Eq(p =>p.Id, id);
             var cht = Builders<Patient>.Update.AddToSet(p => p.Charts, new Patient.Chart());
-            patients.FindOneAndUpdate(fltr, cht);
-                                          
-                
+            // patients.FindOneAndUpdate(fltr, cht);            
+            patients.FindOneAndUpdateAsync(fltr, cht);            
                   
         }
     }
