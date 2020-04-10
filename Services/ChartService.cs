@@ -11,7 +11,7 @@ namespace PatientMgt.Services
 {
     public class ChartService
     {
-        private readonly IMongoCollection<Chart> charts;
+        private readonly IMongoCollection<Patient.Chart> charts;
         // private IList<Chart> charts;
         // private readonly IMongoCollection<Patient> patients;        
         
@@ -21,7 +21,7 @@ namespace PatientMgt.Services
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");
-            charts = db.GetCollection<Chart>("Charts"); 
+            charts = db.GetCollection<Patient.Chart>("Charts"); 
             
 
             

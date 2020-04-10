@@ -48,3 +48,9 @@ url id passing 하는 법
 
 https://stackoverflow.com/questions/37180296/pass-an-id-independent-from-model-mvc-c
 id passing 하는 법
+https://stackoverflow.com/questions/24673292/get-id-from-url-in-an-action-from-a-controller-with-asp-net?rq=1
+how to get id from url
+https://stackoverflow.com/questions/979532/how-to-get-the-current-route-id-within-a-view-from-the-url-asp-net-mvc
+
+https://weblog.west-wind.com/posts/2019/May/15/Accessing-RouteData-in-an-ASPNET-Core-Controller-Constructor
+

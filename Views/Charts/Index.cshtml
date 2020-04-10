@@ -1,10 +1,10 @@
-@model IEnumerable<PatientMgt.Models.Chart>
+@model IEnumerable<PatientMgt.Models.Patient.Chart>
 
 @{
-    ViewData["Title"] = "Chart of ...Patient";
+    ViewData["Title"] = "Chart of Patient";
 }
 
-<h1>Lists of ...Patient</h1>
+<h1>Chart Lists of @Url.ActionContext.RouteData.Values["id"] Patient</h1>
 
 <p>
     <a asp-action="Create">Add New Chart of ...Patient</a>
