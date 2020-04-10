@@ -45,3 +45,6 @@ subdocument 가져오는 법
 
 https://stackoverflow.com/questions/51937439/passing-id-to-url-asp-net-mvc
 url id passing 하는 법
+
+https://stackoverflow.com/questions/37180296/pass-an-id-independent-from-model-mvc-c
+id passing 하는 법
