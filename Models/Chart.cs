@@ -1,56 +1,59 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+// using System;
+// using System.ComponentModel.DataAnnotations;
+// using MongoDB.Bson;
+// using MongoDB.Bson.Serialization.Attributes;
 
 
 
 
-namespace PatientMgt.Models
-{
-    public class Chart
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+// namespace PatientMgt.Models
+// {
+//     public class Chart
+//     {
+//         [BsonId]
+//         [BsonRepresentation(BsonType.ObjectId)]
+//         public string Id { get; set; }
 
-        [BsonElement("PatientName")]
-        [BsonRequired]
-        public string PatientName { get; set; }
+//         [BsonElement("PatientId")]
+//         public string PatientId { get; set; } 
 
-        [BsonElement("VisitDate")]
-        [DataType(DataType.Date)]
-        public DateTime VisitDate { get; set; }
+//         [BsonElement("PatientName")]
+//         [BsonRequired]
+//         public string PatientName { get; set; }
 
-        [BsonElement("DoctorName")]
-        public string DoctorName { get; set; }
+//         [BsonElement("VisitDate")]
+//         [DataType(DataType.Date)]
+//         public DateTime VisitDate { get; set; }
 
-        [BsonElement("ChiefComplaint")]        
-        public string ChiefComplaint { get; set; }
+//         [BsonElement("DoctorName")]
+//         public string DoctorName { get; set; }
 
-        [BsonElement("PresentIllness")]
-        public string PresentIllness { get; set; }
+//         [BsonElement("ChiefComplaint")]        
+//         public string ChiefComplaint { get; set; }
 
-        [BsonElement("PastHistory")]                
-        public string PastHistory { get; set; }        
+//         [BsonElement("PresentIllness")]
+//         public string PresentIllness { get; set; }
 
-        [BsonElement("PhysicalExam")]
-        public string PhysicalExam { get; set; } 
+//         [BsonElement("PastHistory")]                
+//         public string PastHistory { get; set; }        
 
-        [BsonElement("Medication")]
-        public string Medication { get; set; } 
+//         [BsonElement("PhysicalExam")]
+//         public string PhysicalExam { get; set; } 
 
-        [BsonElement("Impression")]
-        public string Impression { get; set; }
+//         [BsonElement("Medication")]
+//         public string Medication { get; set; } 
 
-        [BsonElement("DxPlan")]
-        public string DxPlan { get; set; }          
+//         [BsonElement("Impression")]
+//         public string Impression { get; set; }
 
-        [BsonElement("TxPlan")]
-        public string TxPlan { get; set; } 
+//         [BsonElement("DxPlan")]
+//         public string DxPlan { get; set; }          
 
-        [BsonElement("UltrasoundExam")]
-        public string UltrasoundExam { get; set; }      
+//         [BsonElement("TxPlan")]
+//         public string TxPlan { get; set; } 
 
-    }
-}
+//         [BsonElement("UltrasoundExam")]
+//         public string UltrasoundExam { get; set; }      
+
+//     }
+// }

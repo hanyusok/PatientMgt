@@ -1,7 +1,7 @@
 using MongoDB.Driver;
-using MongoDB.Bson.Serialization;
 using MongoDB.Bson;
 using PatientMgt.Models;
+using PatientMgt.Services;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,40 +9,32 @@ using System.Linq;
 
 namespace PatientMgt.Services
 {
-    public class ChartService
+    public class ChartService 
     {
         private readonly IMongoCollection<Patient.Chart> charts;
-        // private IList<Chart> charts;
-        // private readonly IMongoCollection<Patient> patients;        
-        
-        
                
         public ChartService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
-            IMongoDatabase db = client.GetDatabase("PatientDb");
-            charts = db.GetCollection<Patient.Chart>("Charts"); 
-            
-
-            
-            
+            IMongoDatabase db = client.GetDatabase("PatientDb");            
+            charts = db.GetCollection<Patient.Chart>("Charts");                                   
 
         }
 
-        public List<Chart> Get()
+        public List<Patient.Chart> Get()
         {
 
             return charts.Find(c => true).ToList();
         }
 
-        public List<Chart> Inquiry(string ptName)
+        public List<Patient.Chart> Inquiry(string ptName)
         {
-            FilterDefinition<Chart> filter = Builders<Chart>.Filter.Empty;
+            FilterDefinition<Patient.Chart> filter = Builders<Patient.Chart>.Filter.Empty;
             ptName = ptName.Trim();
             
             if (ptName.Length > 0)
             {
-                filter = filter & Builders<Chart>.Filter.Regex(c => c.PatientName,
+                filter = filter & Builders<Patient.Chart>.Filter.Regex(c => c.PatientName,
                             new BsonRegularExpression(string.Format("{0}", ptName), "i"));            
             }
 
@@ -52,10 +44,10 @@ namespace PatientMgt.Services
                 c.Impression,           c.DxPlan,       c.TxPlan,       c.UltrasoundExam
             }).ToList();
 
-            List<Chart> pcharts = new List<Chart>();
+            List<Patient.Chart> pcharts = new List<Patient.Chart>();
             foreach (var item in filteredcharts)
             {
-                Chart c = new Chart();
+                Patient.Chart c = new Patient.Chart();
                 c.Id = item.Id;
                 c.PatientName = item.PatientName;
                 c.VisitDate = item.VisitDate;
@@ -74,24 +66,24 @@ namespace PatientMgt.Services
             return pcharts;            
         }
 
-        public Chart Get(string id)
+        public Patient.Chart Get(string id)
         {
             return charts.Find(c => c.Id == id).FirstOrDefault();
         }
 
-        public Chart Create(Chart c)
+        public Patient.Chart Create(Patient.Chart c)
         {         
             charts.InsertOne(c);
             return c;
         }
 
 
-        public void Update(string id, Chart next)
+        public void Update(string id, Patient.Chart next)
         {
             charts.ReplaceOne(c => c.Id == id, next);
         }
 
-        public void Remove(Chart ct)
+        public void Remove(Patient.Chart ct)
         {
             charts.DeleteOne(c => c.Id == ct.Id);
         }

@@ -25,10 +25,8 @@ namespace PatientMgt
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<PatientService>();
-            services.AddScoped<ChartService>();                  
+            services.AddScoped<ChartService>();              
             services.AddControllersWithViews();
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

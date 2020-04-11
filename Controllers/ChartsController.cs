@@ -14,9 +14,9 @@ namespace PatientMgt.Controllers
             this.chartService = chartService;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            return View(chartService.Get());
+            return View(chartService.Get(id));
         }
 
         public ActionResult Inquiry(string ptName)
@@ -54,7 +54,7 @@ namespace PatientMgt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Chart c)
+        public IActionResult Create(Patient.Chart c)
         {
             if(ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace PatientMgt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(string id, Chart c)
+        public ActionResult Edit(string id, Patient.Chart c)
         {
             if (id != c.Id)
             {
