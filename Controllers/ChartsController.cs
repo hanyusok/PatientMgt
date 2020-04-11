@@ -16,7 +16,16 @@ namespace PatientMgt.Controllers
 
         public ActionResult Index(string id)
         {
-            return View(chartService.Get(id));
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var c = chartService.Get(id);
+            if (c == null)
+            {
+                return NotFound();
+            }
+            return View(c);
         }
 
         public ActionResult Inquiry(string ptName)
@@ -54,12 +63,12 @@ namespace PatientMgt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Patient.Chart c)
+        public IActionResult Create(string id, Patient.Chart c)
         {
             if(ModelState.IsValid)
             {
-                chartService.Create(c);
-                return RedirectToAction(nameof(Index));
+                chartService.Create(id, c);
+                return RedirectToAction(nameof(Index));                
             }
             return View(c);
         }
@@ -122,7 +131,7 @@ namespace PatientMgt.Controllers
                 {
                     return NotFound();
                 }
-                chartService.Remove(c.Id);
+                // chartService.Remove(c.Id);
                 return RedirectToAction(nameof(Index));
             }
             catch

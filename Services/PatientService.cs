@@ -72,7 +72,7 @@ namespace PatientMgt.Services
 
 
         public Patient Create(Patient p)
-        {                    
+        {                  
             patients.InsertOne(p);
             return p;
         }
@@ -106,22 +106,11 @@ namespace PatientMgt.Services
         {
             patients.DeleteOne(p => p.Id == id);
         }
-
         
         public IEnumerable<Patient.Chart> GetCharts(string id)
         {
             var pt = patients.Find(p => p.Id == id).FirstOrDefault();            
             return pt.Charts;
-        }
-
-        
-        public void InsertChart(string id, Patient.Chart chart)
-        {
-            var fltr = Builders<Patient>.Filter.Eq(p =>p.Id, id);
-            var cht = Builders<Patient>.Update.AddToSet(p => p.Charts, new Patient.Chart());
-            // patients.FindOneAndUpdate(fltr, cht);            
-            patients.FindOneAndUpdateAsync(fltr, cht);            
-                  
-        }
+        }     
     }
 }

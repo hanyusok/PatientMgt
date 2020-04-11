@@ -76,7 +76,8 @@ namespace PatientMgt.Models
 
         //One patient to Many charts
         [BsonElement("Charts")]
-        public IEnumerable<Chart> Charts { get; set; } 
+           
+        public IEnumerable<Chart> Charts { get; set; }               
 
         public class Chart
         {
@@ -84,8 +85,8 @@ namespace PatientMgt.Models
             [BsonRepresentation(BsonType.ObjectId)]
             public string Id { get; set; }  
 
-            [BsonElement("PatientId")]
-            public string PatientId { get; set; } 
+            [BsonElement("PtId")]
+            public string PtId { get; set; } 
 
             [BsonElement("PatientName")]
             [BsonRequired]
@@ -123,10 +124,9 @@ namespace PatientMgt.Models
             public string TxPlan { get; set; } 
 
             [BsonElement("UltrasoundExam")]
-            public string UltrasoundExam { get; set; } 
-                
+            public string UltrasoundExam { get; set; }                 
 
-        }  
+        }          
     }
 
 }

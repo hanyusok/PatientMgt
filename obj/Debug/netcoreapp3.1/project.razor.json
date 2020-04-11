@@ -20526,11 +20526,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\src\\PatientMgt\\Views\\Patients\\EditChart.cshtml",
-      "TargetPath": "Views\\Patients\\EditChart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\src\\PatientMgt\\Views\\Patients\\Index.cshtml",
       "TargetPath": "Views\\Patients\\Index.cshtml",
       "FileKind": "mvc"
@@ -20613,11 +20608,6 @@
     {
       "FilePath": "c:\\src\\PatientMgt\\Views\\Patients\\Delete.cshtml",
       "TargetPath": "Views\\Patients\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\src\\PatientMgt\\Views\\Patients\\NewChart.cshtml",
-      "TargetPath": "Views\\Patients\\NewChart.cshtml",
       "FileKind": "mvc"
     },
     {

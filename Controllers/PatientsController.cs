@@ -154,17 +154,17 @@ namespace PatientMgt.Controllers
             return View();
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult AddChart(string id, Patient.Chart pcht)
-        {
-            if(ModelState.IsValid)
-            {
-                patientService.InsertChart(id, pcht) ;
-                return RedirectToActionPermanent(nameof(Charting), pcht);
-            }
-            return View(pcht);
-        }
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public IActionResult AddChart(string id, Patient.Chart pcht)
+        // {
+        //     if(ModelState.IsValid)
+        //     {
+        //         patientService.InsertChart(id, pcht) ;
+        //         return RedirectToActionPermanent(nameof(Charting), pcht);
+        //     }
+        //     return View(pcht);
+        // }
         // public ActionResult AddChart(string id, Patient.Chart chart)
         // {
         //     if (id == null)

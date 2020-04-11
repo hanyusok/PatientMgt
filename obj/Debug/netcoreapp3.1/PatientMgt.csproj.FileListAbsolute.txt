@@ -273,5 +273,3 @@ C:\src\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.pdb
 C:\src\PatientMgt\obj\Debug\netcoreapp3.1\PatientMgt.genruntimeconfig.cache
 C:\src\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Patients\Charting.cshtml.g.cs
 C:\src\PatientMgt\bin\Debug\netcoreapp3.1\data.json
-C:\src\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Patients\EditChart.cshtml.g.cs
-C:\src\PatientMgt\obj\Debug\netcoreapp3.1\Razor\Views\Patients\NewChart.cshtml.g.cs

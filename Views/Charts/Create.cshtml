@@ -11,7 +11,7 @@
 
 <div class="">
     <div class="">
-        <form asp-action="Create">
+        <form asp-controller="Charts" asp-action="Create" asp-route-id=@Url.ActionContext.RouteData.Values["id"] >
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 
                 <div class="form-row">
@@ -97,7 +97,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-route-id=@Url.ActionContext.RouteData.Values["id"] >Back to List</a>
 </div>
 
 @section Scripts {

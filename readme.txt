@@ -54,3 +54,5 @@ https://stackoverflow.com/questions/979532/how-to-get-the-current-route-id-withi
 
 https://weblog.west-wind.com/posts/2019/May/15/Accessing-RouteData-in-an-ASPNET-Core-Controller-Constructor
 
+https://stackoverflow.com/questions/29168496/mongodb-addtoset-to-a-non-array-field-when-update-on-upsert
+update는 existing array가 먼저 존재해야 insert된다.

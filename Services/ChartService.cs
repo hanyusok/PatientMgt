@@ -11,21 +11,28 @@ namespace PatientMgt.Services
 {
     public class ChartService 
     {
-        private readonly IMongoCollection<Patient.Chart> charts;
-               
+        // private readonly IMongoCollection<Patient.Chart> charts;
+        private readonly IMongoCollection<Patient> patients;    
+        private readonly IMongoCollection<Patient.Chart> charts;    
+        
         public ChartService(IConfiguration config)
         {
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");            
-            charts = db.GetCollection<Patient.Chart>("Charts");                                   
+            patients = db.GetCollection<Patient>("Patients"); 
+            charts = db.GetCollection<Patient.Chart>("Charts");
+                                              
 
         }
 
-        public List<Patient.Chart> Get()
+        public IEnumerable<Patient.Chart> Get(string id)
         {
-
-            return charts.Find(c => true).ToList();
+            var pt = patients.Find(p => p.Id == id ).FirstOrDefault();
+            IEnumerable<Patient.Chart> ptchts = pt.Charts;
+            return ptchts;
+            // return charts.Find(c => true).ToList();
         }
+      
 
         public List<Patient.Chart> Inquiry(string ptName)
         {
@@ -66,15 +73,43 @@ namespace PatientMgt.Services
             return pcharts;            
         }
 
-        public Patient.Chart Get(string id)
-        {
-            return charts.Find(c => c.Id == id).FirstOrDefault();
-        }
+        // public Patient.Chart Get(string id)
+        // {
+        //     return charts.Find(c => c.Id == id).FirstOrDefault();
+        // }
 
-        public Patient.Chart Create(Patient.Chart c)
-        {         
-            charts.InsertOne(c);
-            return c;
+        // public Patient.Chart Create(string id, Patient.Chart c)
+        // {   
+        //     var pt = patients.Find(p => p.Id == id ).FirstOrDefault();
+        //     IEnumerable<Patient.Chart> ptchts = pt.Charts;
+        //     foreach (var item in ptchts)
+        //     {
+        //         var cht = new Patient.Chart();
+        //         cht.Id = item.Id;
+        //         cht.PatientName = item.PatientName;
+        //         cht.VisitDate = item.VisitDate;
+        //         cht.DoctorName = item.DoctorName;
+        //         cht.ChiefComplaint = item.ChiefComplaint;
+        //         cht.PresentIllness = item.PresentIllness;
+        //         cht.PastHistory = item.PastHistory;
+        //         cht.PhysicalExam = item.PhysicalExam;
+        //         cht.Medication = item.Medication;
+        //         cht.Impression = item.Impression;
+        //         cht.DxPlan = item.DxPlan;
+        //         cht.TxPlan = item.TxPlan;
+        //         cht.UltrasoundExam = item.UltrasoundExam;
+        //         ptchts.Append(cht);                
+        //     }      
+        //     patients.InsertOne(ptchts);
+        //     // charts.InsertOne(c);
+        //     return pt.Charts;
+        // }
+          public Patient.Chart Create(string id, Patient.Chart chart)
+        {            
+            var fltr = Builders<Patient>.Filter.Eq(p =>p.Id, id);
+            var upd = Builders<Patient>.Update.AddToSet(p => p.Charts, chart);                
+            patients.UpdateOne(fltr, upd);
+            return chart;
         }
 
 
