@@ -20,12 +20,12 @@ namespace PatientMgt.Controllers
             {
                 return NotFound();
             }
-            var c = chartService.Get(id);
-            if (c == null)
+            var cs = chartService.Get(id);
+            if (cs == null)
             {
                 return NotFound();
             }
-            return View(c);
+            return View(cs);
         }
 
         public ActionResult Inquiry(string ptName)
@@ -56,7 +56,7 @@ namespace PatientMgt.Controllers
             return View(c);
         }
 
-        public ActionResult Create()
+        public ActionResult Create(string id)
         {
             return View();
         }
@@ -68,7 +68,8 @@ namespace PatientMgt.Controllers
             if(ModelState.IsValid)
             {
                 chartService.Create(id, c);
-                return RedirectToAction(nameof(Index));                
+                var cs = chartService.Get(id);
+                return View(cs);                
             }
             return View(c);
         }

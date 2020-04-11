@@ -19,6 +19,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
@@ -74,6 +75,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.ActionLink("수정", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("자세히", "Details", new { id = item.Id }) |
+                @Html.ActionLink("삭제", "Delete", new { id = item.Id }) |
+                @* @Html.ActionLink("차트 보기", "Charting", new { id = item.Id}) | *@
+                <a asp-controller="Charts" asp-action="Index" asp-route-id="@item.Id">Chart Index</a> |                
+                <a asp-controller="Charts" asp-action="Create" asp-route-id="@item.Id">Insert New Chart</a>
+                
+            </td>
+            <td>
                 @if (item.ImageUrl != null)
                 {
                     <img src="@Url.Content(item.ImageUrl)" alt="Image" />
@@ -125,15 +135,7 @@
                 @Html.DisplayFor(modelItem => item.Charts)
             </td> *@
                   
-            <td>
-                @Html.ActionLink("수정", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("자세히", "Details", new { id = item.Id }) |
-                @Html.ActionLink("삭제", "Delete", new { id = item.Id }) |
-                @* @Html.ActionLink("차트 보기", "Charting", new { id = item.Id}) | *@
-                <a asp-controller="Charts" asp-action="Index" asp-route-id="@item.Id">Chart Index</a> |                
-                <a asp-controller="Charts" asp-action="Create" asp-route-id="@item.Id">Insert New Chart</a>
-                
-            </td>
+            
         </tr>
 }
     </tbody>
