@@ -67,11 +67,9 @@ namespace PatientMgt.Controllers
         {
             if(ModelState.IsValid)
             {
-                chartService.Create(id, c);
-                var cs = chartService.Get(id);
-                return View(cs);                
-            }
-            return View(c);
+                chartService.Create(id, c);                                     
+            }            
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Edit(string id)

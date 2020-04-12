@@ -7,7 +7,7 @@
 <h1>Chart Lists of @Url.ActionContext.RouteData.Values["id"] Patient</h1>
 
 <p>
-    <a asp-action="Create">Add New Chart of ...Patient</a>
+    <a asp-action="Create" asp-route-id=@Url.ActionContext.RouteData.Values["id"] >Add New Chart of ...Patient</a>
 </p>
 <!-- Search form -->
 
