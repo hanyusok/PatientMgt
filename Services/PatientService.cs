@@ -93,7 +93,8 @@ namespace PatientMgt.Services
                         .Set(p => p.Examination, up.Examination)
                         .Set(p => p.Diagnosis, up.Diagnosis)
                         .Set(p => p.ImageUrl, up.ImageUrl)
-                        .Set(p => p.Cost, up.Cost);                
+                        .Set(p => p.Cost, up.Cost)
+                        .Set(p => p.Charts, up.Charts);                
             patients.FindOneAndUpdate(p => p.Id == id, upd);
         }
 

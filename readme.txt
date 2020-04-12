@@ -56,3 +56,7 @@ https://weblog.west-wind.com/posts/2019/May/15/Accessing-RouteData-in-an-ASPNET-
 
 https://stackoverflow.com/questions/29168496/mongodb-addtoset-to-a-non-array-field-when-update-on-upsert
 update는 existing array가 먼저 존재해야 insert된다.
+
+https://stackoverflow.com/questions/1257482/redirecttoaction-with-parameter
+redirect id??
+https://stackoverflow.com/questions/45201110/send-a-value-using-redirecttoaction-in-mvc-c-sharp
