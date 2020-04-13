@@ -63,3 +63,11 @@ https://stackoverflow.com/questions/45201110/send-a-value-using-redirecttoaction
 
 https://forums.asp.net/t/2034532.aspx?How+to+convert+Html+ActionLink+to+a+button+
 htmlActionLink에 button 생성하는 법
+
+https://docs.mongodb.com/manual/tutorial/query-array-of-documents/
+subdocument array handle
+
+https://stackoverflow.com/questions/44772133/c-sharp-mongo-remove-sub-document-of-sub-document
+
+https://medium.com/@xsoheilalizadeh/asp-net-core-identity-deep-dive-introduction-755dce7e304a
+login- authen, user 과정

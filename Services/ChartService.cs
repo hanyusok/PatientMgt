@@ -26,9 +26,30 @@ namespace PatientMgt.Services
         public IEnumerable<Patient.Chart> Get(string id)
         {            
             var pt = patients.Find(p => p.Id == id ).FirstOrDefault();
-            var ptchts = pt.Charts;
-            return ptchts;
-            // return charts.Find(c => true).ToList();
+            return pt.Charts.AsEnumerable();            
+        }
+
+        public Patient.Chart Get(string pid, string cid)
+        {
+            var pt = patients.Find(p => p.Id == pid).FirstOrDefault();
+            Patient.Chart c = new Patient.Chart();
+            foreach (var item in pt.Charts)
+            {
+                c.Id = item.Id;
+                c.PatientName = item.PatientName;
+                c.VisitDate = item.VisitDate;
+                c.DoctorName = item.DoctorName;
+                c.ChiefComplaint = item.ChiefComplaint;
+                c.PresentIllness = item.PresentIllness;
+                c.PastHistory = item.PastHistory;
+                c.PhysicalExam = item.PhysicalExam;
+                c.Medication = item.Medication;
+                c.Impression = item.Impression;
+                c.DxPlan = item.DxPlan;
+                c.TxPlan = item.TxPlan;
+                c.UltrasoundExam = item.UltrasoundExam;
+            }
+            return  c;
         }
       
 
