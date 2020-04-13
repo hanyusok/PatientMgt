@@ -7,12 +7,13 @@
 <h1>Inquiry Patient List</h1>
 
 <p>
-    <a asp-action="Create">Add New Patient</a>
+    <a asp-action="Index" class="btn btn-info">Patient List</a>
 </p>
 
 <form class="form-inline mr-auto" asp-controller="Patients" asp-action="Inquiry">
   <input class="form-control mr-sm-2" type="text" placeholder="환자이름" aria-label="Search" name="pname">
-  <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">검색</button>
+  @* <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">검색</button> *@
+  <button class="btn btn-default btn-rounded" type="submit">검색</button>
 </form>
 
 
@@ -126,13 +127,13 @@
             </td> *@
                   
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-success btn-sm"}) 
+                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class="btn btn-warning btn-sm"}) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class="btn btn-danger btn-sm"})
             </td>
         </tr>
 }
     </tbody>
 </table>
 
-<a asp-action="Index">Back to List</a>
+@* <a asp-action="Index">Back to List</a> *@

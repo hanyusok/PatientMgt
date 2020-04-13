@@ -7,7 +7,9 @@
 <h1>Chart Lists of @Url.ActionContext.RouteData.Values["id"] Patient</h1>
 
 <p>
-    <a asp-action="Create" asp-route-id=@Url.ActionContext.RouteData.Values["id"] >Add New Chart of ...Patient</a>
+    <a class="btn btn-success" asp-action="Create" asp-route-id=@Url.ActionContext.RouteData.Values["id"] >New Chart</a>
+    <a class="btn btn-info" asp-action="Index" asp-route-id=@Url.ActionContext.RouteData.Values["id"] >Refresh Lists</a>
+    <a asp-controller="Patients" asp-action="Index" class="btn btn-primary" >Patient Lists</a>
 </p>
 <!-- Search form -->
 

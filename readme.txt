@@ -60,3 +60,6 @@ update는 existing array가 먼저 존재해야 insert된다.
 https://stackoverflow.com/questions/1257482/redirecttoaction-with-parameter
 redirect id??
 https://stackoverflow.com/questions/45201110/send-a-value-using-redirecttoaction-in-mvc-c-sharp
+
+https://forums.asp.net/t/2034532.aspx?How+to+convert+Html+ActionLink+to+a+button+
+htmlActionLink에 button 생성하는 법

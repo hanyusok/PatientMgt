@@ -109,6 +109,6 @@
     </dl>                                                                                   
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new {@class = "btn btn-success" })
+    <a asp-action="Index" class="btn btn-info">Back to List</a>
 </div>
