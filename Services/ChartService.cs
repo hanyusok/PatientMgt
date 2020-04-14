@@ -35,14 +35,9 @@ namespace PatientMgt.Services
             var chts = pt.Charts.ToArray();
             var ct = new Patient.Chart();
             ct = chts[cid];
+            // cid 0에 고정???
             return ct;   
-            // var cht = patients.Find(p => p.Id == id).FirstOrDefault();
-            // var bldr = Builders<Patient.Chart>.Filter;
-            // var flr = bldr.Eq("_id", id) &  bldr.Eq("Charts.Cn", cid);
-            // var prj = Builders<Patient.Chart>.Projection.Include("Charts.$");
-            // var rslt = charts.Find<Patient.Chart>(flr).Project(prj).FirstOrDefault();
-                      
-            // return rslt;                         
+                                  
         }      
 
         public List<Patient.Chart> Inquiry(string ptName)
