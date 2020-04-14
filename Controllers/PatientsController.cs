@@ -130,19 +130,6 @@ namespace PatientMgt.Controllers
             }
         }
 
-        public ActionResult Charting(string id)
-        {
-            if (id == null)
-            {
-                return NotFound();                
-            }            
-            var ptCht = patientService.GetCharts(id);
-            if (ptCht == null)
-            {
-                return NotFound();
-            } 
-            return View(ptCht);            
-        }
 
         public ActionResult NewChart(string id)
         {
@@ -154,31 +141,5 @@ namespace PatientMgt.Controllers
             return View();
         }
 
-        // [HttpPost]
-        // [ValidateAntiForgeryToken]
-        // public IActionResult AddChart(string id, Patient.Chart pcht)
-        // {
-        //     if(ModelState.IsValid)
-        //     {
-        //         patientService.InsertChart(id, pcht) ;
-        //         return RedirectToActionPermanent(nameof(Charting), pcht);
-        //     }
-        //     return View(pcht);
-        // }
-        // public ActionResult AddChart(string id, Patient.Chart chart)
-        // {
-        //     if (id == null)
-        //     {
-        //         return NotFound();
-        //     }
-            
-        //     if(ModelState.IsValid)
-        //     {
-        //         patientService.InsertChart(id, chart);
-        //         return RedirectToAction(nameof(Charting));
-        //     }
-        //     // return View(p.Charts);
-        //     return View();
-        // }
     }
 }

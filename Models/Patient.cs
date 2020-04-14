@@ -85,8 +85,8 @@ namespace PatientMgt.Models
             [BsonRepresentation(BsonType.ObjectId)]
             public string Id { get; set; }  
 
-            [BsonElement("PtId")]
-            public string PtId { get; set; } 
+            [BsonElement("Cn")]
+            public int Cn { get; set; } 
 
             [BsonElement("PatientName")]
             [BsonRequired]

@@ -10,8 +10,7 @@ using System.Linq;
 namespace PatientMgt.Services
 {
     public class ChartService 
-    {
-        // private readonly IMongoCollection<Patient.Chart> charts;
+    {        
         private readonly IMongoCollection<Patient> patients;    
         private readonly IMongoCollection<Patient.Chart> charts;    
         
@@ -20,17 +19,26 @@ namespace PatientMgt.Services
             MongoClient client = new MongoClient(config.GetConnectionString("PatientDb"));
             IMongoDatabase db = client.GetDatabase("PatientDb");            
             patients = db.GetCollection<Patient>("Patients"); 
-            charts = db.GetCollection<Patient.Chart>("Charts");                                             
+            charts = db.GetCollection<Patient.Chart>("Charts");
+            
         }
 
         public IEnumerable<Patient.Chart> Get(string id)
         {            
             var pt = patients.Find(p => p.Id == id ).FirstOrDefault();
-            var ptchts = pt.Charts;
-            return ptchts;
-            // return charts.Find(c => true).ToList();
+            return pt.Charts.AsEnumerable();            
         }
-      
+
+        public Patient.Chart Get(string id, int cid)
+        {
+            var pt = patients.Find(p => p.Id == id).FirstOrDefault();
+            var chts = pt.Charts.ToArray();
+            var ct = new Patient.Chart();
+            ct = chts[cid];
+            // cid 0에 고정???
+            return ct;   
+                                  
+        }      
 
         public List<Patient.Chart> Inquiry(string ptName)
         {
