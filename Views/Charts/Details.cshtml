@@ -17,6 +17,12 @@
             <img src="@Url.Content(Model.ImageUrl)" alt="Image"/>
         </dd> *@
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model =>model.Cn)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.Cn)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model =>model.PatientName)
         </dt>
         <dd class="col-sm-4">
@@ -85,6 +91,6 @@
     </dl>                                                                                   
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { cid = Model.Cn})  |
     <a asp-action="Index">Back to List</a>
 </div>

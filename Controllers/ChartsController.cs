@@ -42,13 +42,13 @@ namespace PatientMgt.Controllers
             return View(inq);      
         }
 
-        public ActionResult Details(string id)
+        public ActionResult Details(string id, int cid)
         {
             if (id == null)
             {
                 return NotFound();
             }
-            var c = chartService.Get(id);
+            var c = chartService.Get(id, cid);
             if ( c == null)
             {
                 return NotFound();
@@ -73,13 +73,13 @@ namespace PatientMgt.Controllers
             return View(c);
         }
 
-        public IActionResult Edit(string id)
+        public IActionResult Edit(string id, int cid)
         {
             if (id == null)
             {
                 return NotFound();                
             }
-            var c = chartService.Get(id);
+            var c = chartService.Get(id, cid);
             if (c == null)
             {
                 return NotFound();

@@ -65,9 +65,15 @@ https://forums.asp.net/t/2034532.aspx?How+to+convert+Html+ActionLink+to+a+button
 htmlActionLink에 button 생성하는 법
 
 https://docs.mongodb.com/manual/tutorial/query-array-of-documents/
-subdocument array handle
+subdocument array handle ->ToList()
 
 https://stackoverflow.com/questions/44772133/c-sharp-mongo-remove-sub-document-of-sub-document
 
 https://medium.com/@xsoheilalizadeh/asp-net-core-identity-deep-dive-introduction-755dce7e304a
 login- authen, user 과정
+
+https://stackoverflow.com/questions/14313649/update-delete-a-sub-document-in-mongodb-using-c-sharp-driver
+subdocument update delete하는 방법
+https://stackoverflow.com/questions/49500551/insert-a-document-while-auto-incrementing-a-sequence-field-in-mongodb
+
+https://stackoverflow.com/questions/50394800/how-to-use-auto-increment-field-in-mongo-c-sharp-driver-without-using-eval
