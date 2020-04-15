@@ -14,3 +14,6 @@ namespace PatientMgt.Models
         public long Value { get; set; }
     }
 }
+
+// ## Reference ##
+// https://stackoverflow.com/questions/50394800/how-to-use-auto-increment-field-in-mongo-c-sharp-driver-without-using-eval

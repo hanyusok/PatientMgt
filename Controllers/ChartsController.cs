@@ -89,15 +89,15 @@ namespace PatientMgt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(string id, Patient.Chart c)
+        public ActionResult Edit(string id,int cid, Patient.Chart c)
         {
-            if (id != c.Id)
+            if (id != c.Id && cid != c.Cn)
             {
                 return NotFound();
             }
             if (ModelState.IsValid)
             {
-                chartService.Update(id, c);
+                chartService.Update(id, cid, c);
                 return RedirectToAction(nameof(Index));
             }
             else

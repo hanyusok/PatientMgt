@@ -1,7 +1,6 @@
 using MongoDB.Driver;
 using MongoDB.Bson;
 using PatientMgt.Models;
-using PatientMgt.Services;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +33,15 @@ namespace PatientMgt.Services
             var pt = patients.Find(p => p.Id == id).FirstOrDefault();
             var chts = pt.Charts.ToArray();
             var ct = new Patient.Chart();
-            ct = chts[cid];
+            foreach (var c in chts.AsEnumerable())
+            {
+                if ( c.Cn == cid)
+                {
+                    ct = c;                    
+                }           
+            }       
+
+            // ct = chts[cid];
             // cid 0에 고정???
             return ct;   
                                   
@@ -81,6 +88,7 @@ namespace PatientMgt.Services
 
           public Patient.Chart Create(string id, Patient.Chart chart)
         {            
+            
             var fltr = Builders<Patient>.Filter.Eq(p =>p.Id, id);
             var upd = Builders<Patient>.Update.AddToSet(p => p.Charts, chart);                
             patients.UpdateOne(fltr, upd);
@@ -88,9 +96,28 @@ namespace PatientMgt.Services
         }
 
 
-        public void Update(string id, Patient.Chart next)
-        {
-            charts.ReplaceOne(c => c.Id == id, next);
+        // public void Update(string id, Patient.Chart next)
+        // {
+        //     charts.ReplaceOne(c => c.Id == id, next);
+        // }
+        public void Update(string id, int cid, Patient.Chart up)
+        {         
+            var flt = Builders<Patient.Chart>.Filter.Where(c => c.Cn == cid);                      
+            var upd = Builders<Patient.Chart>.Update
+                        .Set(c => c.Cn, up.Cn)
+                        .Set(c => c.PatientName, up.PatientName)
+                        .Set(c => c.VisitDate, up.VisitDate)
+                        .Set(c => c.DoctorName, up.DoctorName)
+                        .Set(c => c.ChiefComplaint, up.ChiefComplaint)
+                        .Set(c => c.PresentIllness, up.PresentIllness)
+                        .Set(c => c.PastHistory, up.PastHistory)
+                        .Set(c => c.PhysicalExam, up.PhysicalExam)
+                        .Set(c => c.Medication, up.Medication)
+                        .Set(c => c.Impression, up.Impression)
+                        .Set(c => c.DxPlan, up.DxPlan)
+                        .Set(c => c.TxPlan, up.TxPlan)
+                        .Set(c => c.UltrasoundExam, up.UltrasoundExam);                        
+            charts.FindOneAndUpdate(flt, upd);
         }
 
         public void Remove(Patient.Chart ct)

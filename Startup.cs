@@ -25,7 +25,8 @@ namespace PatientMgt
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<PatientService>();
-            services.AddScoped<ChartService>();              
+            services.AddScoped<ChartService>(); 
+            services.AddScoped<SequenceService>();             
             services.AddControllersWithViews();
         }
 

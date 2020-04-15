@@ -81,3 +81,8 @@ https://stackoverflow.com/questions/49500551/insert-a-document-while-auto-increm
 
 https://stackoverflow.com/questions/50394800/how-to-use-auto-increment-field-in-mongo-c-sharp-driver-without-using-eval
 >>>>>>> 4c79b9b1909ff5bb3de1e085a6116031c05bb4ac
+
+https://www.tutlane.com/tutorial/aspnet-mvc/url-routing-in-asp-net-mvc-example-with-multiple-parameters-query-strings
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-3.1
+multiple routing 살펴보자
